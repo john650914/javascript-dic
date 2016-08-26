@@ -1,0 +1,9 @@
+{
+	"ajax":{
+		"title":"Ajax物件 - Javascript字典",
+		"content":"/documentation/ajax.php",
+		"description":"提供完整的Ajax物件及其方法、屬性的說明文件與範例",
+		"keywords":"Javascript,Ajax,非同步請求,XMLHTTP,XMLHttpRequest,物件,object,字典,方法,屬性,使用說明,文件,範例",
+		"url":"http://javascript.john650914.com/document.php#!ajax"
+	}
+}
