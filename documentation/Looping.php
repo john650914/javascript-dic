@@ -37,33 +37,47 @@
 	<tr>
 		<td>for</td>
 		<td>關鍵字</td>
-		<td>for迴圈是前測試迴圈(代表是否終止迴圈的條件判斷是在執行內部程式碼之前，因此迴圈的主體可能根本不被執行)，在進入迴圈之前能夠初始化變數，並且定義迴圈後要執行的程式碼，其語法如下：<br />
-		for(initial var; expression; post-loop-expression){statement}<br />
-		執行過程如下：<br />
-		第一個項目(initial var)是用來設定控制迴圈執行次數的變數初值，這個項目只會被執行一次。<br />
-		第二個項目(expression)是是否執行迴圈的條件判斷式，只有成立，它就會執行大刮號{ ... }裡的程式，直到條件判斷為否為止。<br />
-		第三個項目(post-loop-expression)是每次執行完{ ... }裡的程式就會執行的敘述，通常是增加或減少控制迴圈執行次數的變數。<br />
-		for迴圈最常用的型式是for(i=0;i&lt;n;i++){statement;}，它表示迴圈一共執行n次，非常適用於己知迴圈次數的運算。<br />
-		以下範例將使用for迴圈計算1+2+3+4+5的和。<br />
-		例：var sum=0; for(var i=1; i<=5; i++){sum+=i;} alert(sum);<br />
-		補充範例請見：javascript物件筆記範例/do, while, for。</td>
+		<td>for迴圈是前測試迴圈(代表是否終止迴圈的條件判斷是在執行內部程式碼之前，因此迴圈的主體可能根本不被執行)，在進入迴圈之前能夠初始化變數，並且定義迴圈後要執行的程式碼，其語法如下：<br>
+		for(initial var; expression; post-loop-expression){statement}<br>
+		執行過程如下：<br>
+		第一個項目(initial var)是用來設定控制迴圈執行次數的變數初值，這個項目只會被執行一次。<br>
+		第二個項目(expression)是是否執行迴圈的條件判斷式，只有成立，它就會執行大刮號{ ... }裡的程式，直到條件判斷為否為止。<br>
+		第三個項目(post-loop-expression)是每次執行完{ ... }裡的程式就會執行的敘述，通常是增加或減少控制迴圈執行次數的變數。<br>
+		for迴圈最常用的型式是for(i=0;i&lt;n;i++){statement;}，它表示迴圈一共執行n次，<u>非常適用於己知迴圈次數的運算</u>。<br>
+		以下範例將使用for迴圈計算1+2+3+4+5的和。<br>
+<pre>
+var sum=0;
+for(var i=1; i<=5; i++){
+	sum+=i;
+}
+alert(sum);
+</pre>
+</td>
 	</tr>
 	<tr>
 		<td>while</td>
 		<td>關鍵字</td>
-		<td>while迴圈是前測試迴圈，這代表是否終止迴圈的條件判斷是在執行內部程式碼之前，因此迴圈的主體可能根本不被執行，其語法如下：<br />
-		while(expression){statement;}<br />
-		當expression為true時，程式會不斷的被執行，直到expression變為false。<br />
-		如下例會利用i來重覆計算sum的加總：<br />
-		var i=1; var sum=0; while(i&lt;=100){sum+=i;i++;} alert(sum);<br />
-		補充範例請見：javascript物件筆記範例/do, while, for</td>
+		<td>while迴圈是前測試迴圈，這代表是否終止迴圈的條件判斷是在執行內部程式碼之前，因此迴圈的主體可能根本不被執行，其語法如下：<br>
+		while(expression){statement;}<br>
+		當expression為true時，程式會不斷的被執行，直到expression變為false。<br>
+		如下例會利用i來重覆計算sum的加總：<br>
+<pre>
+var i=1;
+var sum=0;
+while(i&lt;=100){
+	sum+=i;
+	i++;
+}
+alert(sum);
+</pre>
+		</td>
 	</tr>
 	<tr>
 		<td>do/while</td>
 		<td>關鍵字</td>
-		<td>do ... while 迴圈它是一種先斬後奏型的迴圈結構，無論如何 do {...} 之間的程式至少會被執行一次，如果while裡面的條件式結果為true，它會繼續執行do{}裡面的程式，直到 while 條件式為false。語法：do{statement1; statement2; ...}while(expression);<br />
-		以下範例利用do{}while()來計算1+2+3+4+5。<br />
-		var i=1; var sum=0; do{sum+=i; i+=1;}while(i&lt;=100); alert(sum);<br />
+		<td>do ... while 迴圈它是一種先斬後奏型的迴圈結構，無論如何 do {...} 之間的程式至少會被執行一次，如果while裡面的條件式結果為true，它會繼續執行do{}裡面的程式，直到 while 條件式為false。語法：do{statement1; statement2; ...}while(expression);<br>
+		以下範例利用do{}while()來計算1+2+3+4+5。<br>
+		var i=1; var sum=0; do{sum+=i; i+=1;}while(i&lt;=100); alert(sum);<br>
 		補充範例如下：
 <pre>
 window.onload = function(){
@@ -126,7 +140,7 @@ c: 789*/
 	<tr>
 		<td>break</td>
 		<td>關鍵字</td>
-		<td>使用break可以立即跳出迴圈，阻止再次執行循環體中的任何程式碼，或是像switch條件式中斷程式區塊。<br />
+		<td>使用break可以立即跳出迴圈，阻止再次執行循環體中的任何程式碼，或是像switch條件式中斷程式區塊。<br>
 		範例如下：
 <pre>
 window.onload = function(){
@@ -160,7 +174,7 @@ window.onload = function(){
 	<tr>
 		<td>continue</td>
 		<td>關鍵字</td>
-		<td>退出一次的迴圈，根據控制運算式還允許進行下一次迴圈。<br />
+		<td>退出一次的迴圈，根據控制運算式還允許進行下一次迴圈。<br>
 		範例如下：
 <pre>
 window.onload = function(){
