@@ -319,11 +319,12 @@ x remains x
 			<td>,</td>
 			<td>特殊運算子</td>
 			<td>逗號運算子 (,) 簡單的對他的兩個運算元求值，並返回第二個運算元的值。這個運算子主要用在 for 迴圈內部，使多個變數可在每一次的循環中更新。
-	<pre>
-	for (var i=0, y=0; i&lt;5; i++, y+=2){
-		document.write(i+" / "+y+"&lt;br /&gt;")
-	}
-	</pre></td>
+<pre>
+for (var i=0, y=0; i&lt;5; i++, y+=2){
+	document.write(i+" / "+y+"&lt;br /&gt;")
+}
+</pre>
+			</td>
 		</tr>
 		<tr>
 			<td>()?:</td>
@@ -335,19 +336,19 @@ x remains x
 			<td>delete</td>
 			<td>特殊運算子</td>
 			<td>delete 運算子可刪除物件、沒有使用var語法的變數、物件的屬性、陣列中指定索引的元素，如果操作成功的話delete運算子返回true；如果操作失敗，就返回false；見下範例：
-	<pre>
-	var myarray=['joe', 'mary', 'jane']
-	var boss={name: 'george'}
-	worker={name: 'peter'}
-	var x=3
-	y=4
+<pre>
+var myarray=['joe', 'mary', 'jane']
+var boss={name: 'george'}
+worker={name: 'peter'}
+var x=3
+y=4
 
-	delete myarray[1] //returns true, myarray[1] now undefined
-	delete boss //returns false, since boss is a declared variable
-	delete worker //returns true, since worker is an undeclared variable
-	delete x //returns false, since x is a declared variable
-	delete y //returns true, since y is an undeclared variable
-	</pre>
+delete myarray[1] //returns true, myarray[1] now undefined
+delete boss //returns false, since boss is a declared variable
+delete worker //returns true, since worker is an undeclared variable
+delete x //returns false, since x is a declared variable
+delete y //returns true, since y is an undeclared variable
+</pre>
 				註：並非所有特性都可被delete刪除，有些內建特性可能無法被刪除，例如在瀏覽器中的一些特性。</td>
 		</tr>
 		<tr>
@@ -357,63 +358,65 @@ x remains x
 				propNameOrNumber in objectName;<br>
 				此處propNameOrNumber是指表示為屬性名的字串、或表示為陣列索引的數值的表達式，objectName是指物件的名稱。<br>
 				以下範例示範in運算子的使用方法：
-	<pre>
-	// 陣列
-	trees=new Array("redwood","bay","cedar","oak","maple")
-	0 in trees        // 返回 true
-	3 in trees        // 返回 true
-	5 in trees        // 返回 false
-	"bay" in trees    // 返回 false（你必須指定索引編號，而不是索引上的值）
-	"length" in trees // 返回 true（length 是 Array 的屬性）
+<pre>
+// 陣列
+trees=new Array("redwood","bay","cedar","oak","maple")
+0 in trees        // 返回 true
+3 in trees        // 返回 true
+5 in trees        // 返回 false
+"bay" in trees    // 返回 false（你必須指定索引編號，而不是索引上的值）
+"length" in trees // 返回 true（length 是 Array 的屬性）
 
-	// 預先定義的物件
-	"PI" in Math          // 返回 true
-	myString=new String("coral")
-	"length" in myString  // 返回 true
+// 預先定義的物件
+"PI" in Math          // 返回 true
+myString=new String("coral")
+"length" in myString  // 返回 true
 
-	// 自訂的物件
-	mycar = {make:"Honda",model:"Accord",year:1998}
-	"make" in mycar  // 返回 true
-	"model" in mycar // 返回 true
-	"Honda" in mycar // 返回 false
-	</pre></td>
+// 自訂的物件
+mycar = {make:"Honda",model:"Accord",year:1998}
+"make" in mycar  // 返回 true
+"model" in mycar // 返回 true
+"Honda" in mycar // 返回 false
+</pre>
+			</td>
 		</tr>
 		<tr>
 			<td>instanceof</td>
 			<td>特殊運算子</td>
 			<td>如果指定的物件屬於指定的物件類型，instanceof運算子返回true。語法為︰
-	<pre>
-	objectName instanceof objectType
-	</pre>
+<pre>
+objectName instanceof objectType
+</pre>
 				此處 objectName 是指用來和 objectType 作比較的物件的名稱，objectType 是指物件的類型，如 Date 或 Array。<br>
 				當你需要確認執行中物件的類型時，就使用 instanceof。舉個例子，當接受到例外時，你可以根據被拋出的例外來決定要執行哪一條例外處理。<br>
 				例如，以下代碼使用 instanceof 確認 theDay 是否屬於 Date 物件。由於 theDay 屬於 Date 物件，所以會執行 if 語法裡的語句。
-	<pre>
-	theDay=new Date(1995, 12, 17);
-	if(theDay instanceof Date){
-	   被執行的語句;
-	}
-	</pre>
+<pre>
+theDay=new Date(1995, 12, 17);
+if(theDay instanceof Date){
+   被執行的語句;
+}
+</pre>
 			</td>
 		</tr>
 		<tr>
 			<td>new</td>
 			<td>特殊運算子</td>
 			<td>我們可以使用new運算子來建立使用者定義的物件類型的實體，或建立預先定義的物件類型，如Array、Boolean、Date、Function、Image、Number、Object、Option、RegExp、String 其中之一；它的語法如下︰
-	<pre>
-	objectName = new objectType(param1 [,param2] ...[,paramN]);
-	</pre>
+<pre>
+objectName = new objectType(param1 [,param2] ...[,paramN]);
+</pre>
 				下例將建立一個Date物件實體：
-	<pre>
-	var today=new Date(); //create new instance of Date object
-	</pre>
-				下例將建立一個三角形面積物件的實體：
-	<pre>
-	function triangle(base, height){
-		this.area=base*height/2
-	}
-	var bigtriangle=new triangle(200, 150); //create new instance of triangle object
-	</pre></td>
+<pre>
+var today=new Date(); //create new instance of Date object
+</pre>
+			下例將建立一個三角形面積物件的實體：
+<pre>
+function triangle(base, height){
+	this.area=base*height/2
+}
+var bigtriangle=new triangle(200, 150); //create new instance of triangle object
+</pre>
+			</td>
 		</tr>
 		<tr>
 			<td>new</td>
@@ -433,19 +436,19 @@ x remains x
 				語法：try{statements} catch(catchID){statements} finally{statements}<br>
 				語法中的catchID表示攔截到的異常對像的實體，目前所知他是有屬性的，像catchID.message、catchID.description、name等…，如果有需要要再去查明。<br><br>
 				以下範例(1)將會返回：An error has occurred: c is not defined.
-	<pre>
-	window.onload = function(){
-		try{
-			a = 1+c;
-			//呼叫不存在的變數"c"
-			//或是呼叫不存在的方法(有時候是寫錯字)，例：allert('something');
-			//或是調用date的未定義的test方法例：date.test();
-			alert('I guess you do exist');
-		}catch(e){
-			alert('An error has occurred: '+e.message);
-		}
+<pre>
+window.onload = function(){
+	try{
+		a = 1+c;
+		//呼叫不存在的變數"c"
+		//或是呼叫不存在的方法(有時候是寫錯字)，例：allert('something');
+		//或是調用date的未定義的test方法例：date.test();
+		alert('I guess you do exist');
+	}catch(e){
+		alert('An error has occurred: '+e.message);
 	}
-	</pre>
+}
+</pre>
 				補充：catchID.name的六種值對應的訊息：<br>
 				&nbsp;&nbsp;1.EvalError：eval()的使用與定義不一致<br>
 				&nbsp;&nbsp;2.RangeError：數值越界<br>
@@ -459,78 +462,80 @@ x remains x
 			<td>throw</td>
 			<td>特殊運算子</td>
 			<td>JavaScript中的異常可以用try..catch..finally語句來處理，也可以手動的來拋出異常；手動異常拋出的語句是throw，其基本語法格式為：
-	<pre>
-	throw expression;
-	</pre>
+<pre>
+throw expression;
+</pre>
 				其中的expression可以是任何一種類型，而不只是特定類型的表達式，也就是說throw “There is a error”;或是throw 1001;都是正確的。以下代碼拋出各式各樣的例外︰
-	<pre>
-	throw "Error2";
-	throw 42;
-	throw true;
-	throw {toString: function(){return "I'm an object!";}};
-	</pre></td>
+<pre>
+throw "Error2";
+throw 42;
+throw true;
+throw {toString: function(){return "I'm an object!";}};
+</pre>
+			</td>
 		</tr>
 		<tr>
 			<td>typeof</td>
 			<td>特殊運算子</td>
 			<td>返回一個字串，指出資料、變數或運算式的資料類型。語法如下：
-	<pre>
-	typeof operand 或是 typeof(operand)
-	</pre>
+<pre>
+typeof operand 或是 typeof(operand)
+</pre>
 			operand是指字串、變數、關鍵字、物件，其類型可被typeof返回。括弧並非必要的。<br>
 			typeof()可能傳回的六個值分別是：number、string、boolean、object、function、和 undefined。<br>
 			以下範例將返回boolean、string及true。<br />
-	<pre>
-	var marriage = true; alert(typeof(marriage));
-	var marriage = "true"; alert(typeof(marriage));
-	if(typeof(myBoolean) == "boolean"){alert('true');}
-	</pre>
+<pre>
+var marriage = true; alert(typeof(marriage));
+var marriage = "true"; alert(typeof(marriage));
+if(typeof(myBoolean) == "boolean"){alert('true');}
+</pre>
 			以下範例將傳回string：
-	<pre>
-	a='9';
-	document.write(typeof a); //執行結果：string
-	</pre>
+<pre>
+a='9';
+document.write(typeof a); //執行結果：string
+</pre>
 				下面再列出各種類型的範例：
-	<pre>
-	//假設你定義了以下變數︰
-	var myFun = new Function("5+2")
-	var shape="round"
-	var size=1
-	var today=new Date()
+<pre>
+//假設你定義了以下變數︰
+var myFun = new Function("5+2")
+var shape="round"
+var size=1
+var today=new Date()
 
-	//typeof 運算子對以下變數返回以下結果︰
-	typeof myFun 返回的是 function
-	typeof shape 返回的是 string
-	typeof size 返回的是 number
-	typeof today 返回的是 object
-	typeof dontExist 返回的是 undefined
+//typeof 運算子對以下變數返回以下結果︰
+typeof myFun 返回的是 function
+typeof shape 返回的是 string
+typeof size 返回的是 number
+typeof today 返回的是 object
+typeof dontExist 返回的是 undefined
 
-	//對於 true 和 null 關鍵字而言，typeof 運算子返回以下結果︰
-	typeof true 返回的是 boolean
-	typeof null 返回的是 object
+//對於 true 和 null 關鍵字而言，typeof 運算子返回以下結果︰
+typeof true 返回的是 boolean
+typeof null 返回的是 object
 
-	//對於數字或字串而言，typeof 運算子返回以下結果︰
-	typeof 62 返回的是 number
-	typeof 'Hello world' 返回的是 string
+//對於數字或字串而言，typeof 運算子返回以下結果︰
+typeof 62 返回的是 number
+typeof 'Hello world' 返回的是 string
 
-	//對於屬性值而言，typeof 運算子返回屬性裡的值的類型︰
-	typeof document.lastModified 返回的是 string
-	typeof window.length 返回的是 number
-	typeof Math.LN2 返回的是 number
+//對於屬性值而言，typeof 運算子返回屬性裡的值的類型︰
+typeof document.lastModified 返回的是 string
+typeof window.length 返回的是 number
+typeof Math.LN2 返回的是 number
 
-	//對於方法和函數而言，typeof 運算子返回以下結果︰
-	typeof blur 返回的是 function
-	typeof eval 返回的是 function
-	typeof parseInt 返回的是 function
-	typeof shape.split 返回的是 function
+//對於方法和函數而言，typeof 運算子返回以下結果︰
+typeof blur 返回的是 function
+typeof eval 返回的是 function
+typeof parseInt 返回的是 function
+typeof shape.split 返回的是 function
 
-	//對於預先定義的物件而言，typeof 運算子返回以下結果︰
-	typeof Date 返回的是 function
-	typeof Function 返回的是 function
-	typeof Math 返回的是 function
-	typeof Option 返回的是 function
-	typeof String 返回的是 function
-	</pre></td>
+//對於預先定義的物件而言，typeof 運算子返回以下結果︰
+typeof Date 返回的是 function
+typeof Function 返回的是 function
+typeof Math 返回的是 function
+typeof Option 返回的是 function
+typeof String 返回的是 function
+</pre>
+			</td>
 		</tr>
 		<tr>
 			<td>void</td>
@@ -539,30 +544,31 @@ x remains x
 				此函式會執行計算式，但會回傳undefined。void 運算子表示表達式求值之後不必把值返回。expression是指可供求值的JavaScript表達式。<br>
 				你可以把 void 運算子使用於當作超連結的表達式。表達式會被求值，但不會被載入而取代目前的文件。<br><br>
 				以下代碼建立了超連結，當使用者點擊時，就傳送表單：
-	<pre>
-	&lt;A HREF="javascript:void(document.form.submit())"&gt;Click here to submit&lt;/A&gt;
-	</pre>
+<pre>
+&lt;A HREF="javascript:void(document.form.submit())"&gt;Click here to submit&lt;/A&gt;
+</pre>
 				以下代碼建立了什麼也不做的超連結。當使用者點擊連結時，void(0) 的求值為 undefined，這在 JavaScript 中並沒有作用：
-	<pre>
-	&lt;A HREF="javascript:void(0)"&gt;Click here to do nothing&lt;/A&gt;
-	</pre>
+<pre>
+&lt;A HREF="javascript:void(0)"&gt;Click here to do nothing&lt;/A&gt;
+</pre>
 				下例示範void傳回的值：
-	<pre>
-	a = void(b=1+1);
-	alert(a);
-	alert(b);
-	</pre>
+<pre>
+a = void(b=1+1);
+alert(a);
+alert(b);
+</pre>
 				void()常用來將網頁的輸出取消。下面的方法可以取消預設的跳頁功能：
-	<pre>
-	javascript:void(0)
-	javascript:;
-	javascript://
+<pre>
+javascript:void(0)
+javascript:;
+javascript://
 
-	&lt;p&gt;&lt;a href="javascript:void(0)" onclick="alert('void(0)')"&gt;請點此&lt;/a&gt;
-	&lt;p&gt;&lt;a href="javascript:;" onclick="alert(';')"&gt;請點此&lt;/a&gt;
-	&lt;p&gt;&lt;a href="javascript://" onclick="alert('//')"&gt;請點此&lt;/a&gt;
-	&lt;p&gt;&lt;a href="" onclick="alert('您好')"&gt;請點此&lt;/a&gt;
-	</pre></td>
+&lt;p&gt;&lt;a href="javascript:void(0)" onclick="alert('void(0)')"&gt;請點此&lt;/a&gt;
+&lt;p&gt;&lt;a href="javascript:;" onclick="alert(';')"&gt;請點此&lt;/a&gt;
+&lt;p&gt;&lt;a href="javascript://" onclick="alert('//')"&gt;請點此&lt;/a&gt;
+&lt;p&gt;&lt;a href="" onclick="alert('您好')"&gt;請點此&lt;/a&gt;
+</pre>
+			</td>
 		</tr>
 	</table>
 </main>

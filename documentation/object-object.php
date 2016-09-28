@@ -68,7 +68,8 @@ var obj1 = {x:123, 'y':'abc', 0:456};
 alert(obj1.x +"\n"+ obj1.y +"\n"+ obj1[0]);
 //以上的x、'y'、0都是成立的，金架糾變態
 </pre>
-			上例可以看到在JavaScript中，main.x 與 main["x"] 這兩種語法是通用的（其實在其他語言中，這兩種表示法的語意並不相同）
+			上例可以看到在JavaScript中，main.x 與 main["x"] 這兩種語法是通用的（其實在其他語言中，這兩種表示法的語意並不相同）<br>
+			<span class="red">// 为obj添加一个属性2a，2a不是合法的标识符（不能以数字开头），不能通过obj.2a来定义<br>obj['2a'] = 'test';</span>
 			<hr>
 			List All Members in an Object<br>
 			這是Javascript的必殺技，使用Javascript的人務必要學會這個技巧。底下函式可以傳回一個物件的所有成員的字串表達式，包括物件中的屬性及方法。在物件導向程式設計中，這種技術叫reflection。

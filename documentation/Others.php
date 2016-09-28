@@ -101,35 +101,136 @@ alert(s.length +"\n"+"Style Sheets");
 		<td>資料類形</td>
 		<td>在建立變數後未指定變數值之前所提供的值；或是指不存在的物件屬性。例var x; typeOf(x)的傳回值是undefined。另外undefined乘以任何數皆為NaN(Not a Number)，所以undefined可視為一個空的字串。</td>
 	</tr>
-	<tr class="red">
+	<tr>
 		<td>()</td>
-		<td>括號</td>
+		<td>小括號</td>
 		<td>
-			http://www.cnitblog.com/kenlistian/archive/2008/04/10/42219.html<br>
-			http://www.huanghengxu.com/Html/Article/231.htm<br>
-			http://topic.csdn.net/u/20070910/19/4f8ac008-c9f7-45c3-bd7b-5a2c94ae466d.html<br>
-			http://hi.baidu.com/%BF%A1%C7%CE%BC%D1%C8%CB%B0%E9%C1%E6%D8%EA/blog/item/71be14250e9cfd398644f982.html<br>
-			http://www.cnblogs.com/snandy/archive/2011/03/08/1977070.html<br>
-			http://www.nowamagic.net/javascript/js_UsageOfBraces.php<br>
-			http://developer.51cto.com/art/201103/248529.htm<br>
-			http://news.csdn.net/n/20080114/112705.html<br>
-			http://topic.csdn.net/u/20081028/20/2c47cc4b-b3c9-48b0-a5ed-c55bd4ab1a0f.html<br>
-			http://www.lizhongda.net/web/NewsView.asp?ID=139&SortID=44<br>
-			http://www.uedcss.com/post/javascript-brackets-test.html<br>
-			http://www.itzsk.com/sold/97.html<br>
-			http://www.360doc.com/content/11/0901/17/7317486_145050161.shtml<br>
-			http://club.topsage.com/thread-2463755-1-1.html<br>
+			小括號(parentheses、round brackets，又稱圓括號)<br><br>
+			● 宣告函式時的參數表
+<pre>
+function myFN(arg1,arg2){ ... }
+</pre>
+			● 條件式中放置條件運算式的位置
+<pre>
+for(var a in obj){ ... }
+if(boo){ ... }
+while(boo){ ... }
+do{ ... }while(boo)
+</pre>
+			● 和new一起使用用來傳值
+<pre>
+// 假設已經定義了類Person，它有兩個欄位姓名(name)，年齡(age)  
+var p1 = new Person('Jack', 26); 
+</pre>
+			● 函式或物件方法的調用運算符(如果有定義參數代入傳值)
+<pre>
+// 假設已經定義了函數func
+func();
+
+// 假設已經定義了物件obj，且擁有func方法
+obj.func();
+</pre>
+			● 強制運算式運算
+<pre>
+function strToJson(str){  
+	// eval 中字串兩旁加了強制運算符()
+	var json = eval('(' + str + ')');
+	return json;
+}
+</pre>
+			● 匿名函式自動執行（這一點據說和強制運算式運算是同樣原理，但我有點不懂，見這裡：http://developer.51cto.com/art/201103/248529.htm）
+<pre>
+(function(){ ... })();
+</pre>
+			<a href="http://bbs.csdn.net/topics/280026617">http://bbs.csdn.net/topics/280026617</a><br>
+			<a href="http://www.cnitblog.com/kenlistian/archive/2008/04/10/42219.html">http://www.cnitblog.com/kenlistian/archive/2008/04/10/42219.html</a><br>
+			<a href="http://topic.csdn.net/u/20070910/19/4f8ac008-c9f7-45c3-bd7b-5a2c94ae466d.html">http://topic.csdn.net/u/20070910/19/4f8ac008-c9f7-45c3-bd7b-5a2c94ae466d.html</a><br>
+			<a href="http://www.cnblogs.com/snandy/archive/2011/03/08/1977070.html">http://www.cnblogs.com/snandy/archive/2011/03/08/1977070.html</a><br>
+			<a href="http://www.nowamagic.net/javascript/js_UsageOfBraces.php">http://www.nowamagic.net/javascript/js_UsageOfBraces.php</a><br>
+			<a href="http://developer.51cto.com/art/201103/248529.htm">http://developer.51cto.com/art/201103/248529.htm</a><br>
+			<a href="http://news.csdn.net/n/20080114/112705.html">http://news.csdn.net/n/20080114/112705.html</a><br>
+			<a href="http://topic.csdn.net/u/20081028/20/2c47cc4b-b3c9-48b0-a5ed-c55bd4ab1a0f.html">http://topic.csdn.net/u/20081028/20/2c47cc4b-b3c9-48b0-a5ed-c55bd4ab1a0f.html</a><br>
+			<a href="http://www.lizhongda.net/web/NewsView.asp?ID=139&SortID=44">http://www.lizhongda.net/web/NewsView.asp?ID=139&SortID=44</a><br>
+			<a href="http://www.uedcss.com/post/javascript-brackets-test.html">http://www.uedcss.com/post/javascript-brackets-test.html</a><br>
+			<a href="http://www.itzsk.com/sold/97.html">http://www.itzsk.com/sold/97.html</a><br>
+			<a href="http://www.360doc.com/content/11/0901/17/7317486_145050161.shtml">http://www.360doc.com/content/11/0901/17/7317486_145050161.shtml</a><br>
+			<a href="http://club.topsage.com/thread-2463755-1-1.html">http://club.topsage.com/thread-2463755-1-1.html</a><br>
 		</td>
 	</tr>
-	<tr class="red">
+	<tr>
 		<td>[]</td>
-		<td>括號</td>
-		<td>同上</td>
+		<td>中括號</td>
+		<td>
+			中括號(square brackets，又稱方括號)<br><br>
+			● 定義陣列：
+<pre>
+var ary = []; // 定義一個空陣列
+var ary = [1, 3]; // 定義一個陣列，同時賦予初值
+</pre>
+			● 選則陣列成員：
+<pre>
+var ary = [1, 2, 3];
+var item = ary[0];
+</pre>
+			● 定義物件成員：
+<pre>
+var obj = {};
+obj["name"] = "Jack";
+</pre>
+			● 選則物件成員：
+<pre>
+var obj = {name:"Jack"};
+alert(obj["name"]);
+</pre>
+		</td>
 	</tr>
-	<tr class="red">
+	<tr>
 		<td>{}</td>
-		<td>括號</td>
-		<td>同上</td>
+		<td>大括號</td>
+		<td>
+			大括號(curly brackets，又稱花括號)<br><br>
+			● 組織複合語句
+<pre>
+if(condition){ ... }else{ ... }
+for(){ ... }
+</pre>
+			● 結構化異常處理的語法符號，這一點和組織複合語句是不同的，在if/else/for等的應用大括弧是可以省略的，但try/catch/finally則不能省略。
+<pre>
+try{ ... }catch(ex){ ...}finally{ ... }
+</pre>
+			● 用來放置函式的內容：
+<pre>
+function myFN(){
+	return 1+1;
+}
+alert(myFN());
+</pre>
+			● 用來定義Javascript物件：
+<pre>
+var s = {
+	name: "John",
+	age: 40,
+	hobby: ["sport","hiking","music"],
+	greeting: function(){
+		alert("Hello！My name is " + this.name +"！");
+	}
+}
+</pre>
+			● 用來定義JSON物件：
+<pre>
+{
+	"John":{
+		"age":20,
+		"gender":"male"
+	},
+	"Mary":{
+		"age":18,
+		"gender":"female"
+	}
+}
+</pre>
+			<a href="http://www.nowamagic.net/javascript/js_UsageOfBraces.php">http://www.nowamagic.net/javascript/js_UsageOfBraces.php</a>，裡面有一些高深的東西，有空來看一下。
+		</td>
 	</tr>
 	<tr class="red">
 		<td>綜合知識</td>
