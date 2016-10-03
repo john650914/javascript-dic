@@ -162,6 +162,11 @@ if(isWinXP){document.write("這是WinXP");} else{document.write("這不是WinXP"
 		Chrome：undefined</td>
 	</tr>
 	<tr>
+		<td>language</td>
+		<td>屬性</td>
+		<td>要來補</td>
+	</tr>
+	<tr>
 		<td>onLine</td>
 		<td>屬性</td>
 		<td>是否與網際網路連線中。<br>

@@ -142,6 +142,37 @@ function strToJson(str){
 <pre>
 (function(){ ... })();
 </pre>
+			補充說明，下面的範例有加()跟沒加會出現不同的結果，原因目前不是很清楚：
+<pre>
+var myFN = function(){ // 這裡會執行
+	alert(123);
+}();
+myFN(); // 而這裡會說myFN is not a function
+
+
+function myFN(){
+	alert(123);
+};
+var newFN = myFN(); // 這裡會執行
+newFN(); // 而這裡會說myFN is not a function
+
+
+function myFN(){
+	alert(123);
+};
+var newFN = myFN;
+newFN(); // 這裡會執行
+
+
+var myFN = function(){
+	return function(){
+		alert(123);
+	}
+}();
+myFN(); // 這裡會執行
+</pre>
+			<a href="http://sweeteason.pixnet.net/blog/post/40371736-javascript-%E9%96%8B%E7%99%BC%E5%AD%B8%E7%BF%92%E5%BF%83%E5%BE%97---%E5%87%BD%E6%95%B8%E7%9A%84%E5%A4%9A%E7%A8%AE%E5%AF%AB%E6%B3%95%E8%88%87%E6%87%89">http://sweeteason.pixnet.net/blog/post/40371736-javascript-%E9%96%8B%E7%99%BC%E5%AD%B8%E7%BF%92%E5%BF%83%E5%BE%97---%E5%87%BD%E6%95%B8%E7%9A%84%E5%A4%9A%E7%A8%AE%E5%AF%AB%E6%B3%95%E8%88%87%E6%87%89</a><br>
+			<a href="http://kenneth-chan.logdown.com/posts/194525-immediate-function-anonymous-function">http://kenneth-chan.logdown.com/posts/194525-immediate-function-anonymous-function</a><br>
 			<a href="http://bbs.csdn.net/topics/280026617">http://bbs.csdn.net/topics/280026617</a><br>
 			<a href="http://www.cnitblog.com/kenlistian/archive/2008/04/10/42219.html">http://www.cnitblog.com/kenlistian/archive/2008/04/10/42219.html</a><br>
 			<a href="http://topic.csdn.net/u/20070910/19/4f8ac008-c9f7-45c3-bd7b-5a2c94ae466d.html">http://topic.csdn.net/u/20070910/19/4f8ac008-c9f7-45c3-bd7b-5a2c94ae466d.html</a><br>
