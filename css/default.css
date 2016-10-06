@@ -12,6 +12,7 @@ input[type="submit"]::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,inp
 /*basic theme*/
 body{font-size:14px; color:#000;}
 h1{font-size:22px; font-weight:bold; margin-bottom:15px;}
+h3{font-weight:bold;}
 a{font:inherit; color:#0087FF;}
 p{margin-bottom:20px;}
 ol, ul{margin-left:15px;}
