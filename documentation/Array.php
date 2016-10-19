@@ -339,6 +339,7 @@ alert(a.lastIndexOf('z')); //返回-1
 		<td>map()</td>
 		<td>方法</td>
 		<td>
+			IE8(含)以下不支援<br>
 			傳回每一個陣列元素執行回調函數(callback)後所返回的值的新陣列，範例如下：
 <pre>
 var a1 = ['a','b','c'];
@@ -384,6 +385,16 @@ colors[colors.length] = 'brown'; //colors.length剛好等於最後一個陣列�
 alert(colors.toString()); //返回red,green,blue,brown
 </pre>
 		</td>
+	</tr>
+	<tr>
+		<td>reduce()</td>
+		<td>方法</td>
+		<td>Reduce the values of an array to a single value (going left-to-right)</td>
+	</tr>
+	<tr>
+		<td>reduceRight()</td>
+		<td>方法</td>
+		<td>Reduce the values of an array to a single value (going right-to-left)</td>
 	</tr>
 	<tr>
 		<td>reverse()</td>

@@ -87,12 +87,44 @@ window.onload = function(){
 	<tr>
 		<td>caller</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			References the function in which the current function is called inside of. If the current function is called at the top level, caller returns null. You can use this property to check the context in which a function is being called. For example:
+<pre>
+function calltest(){
+	alert(calltest.caller);
+}
+
+calltest();
+//alerts null, as calltest() is being called at the top level
+
+function myresidence(){
+	calltest();
+}
+
+myresidence();
+//alerts function myresidence(), the function in which calltest() was called inside
+</pre>
+		</td>
 	</tr>
 	<tr>
 		<td>length</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Returns the number of expected parameters for a function. Contrast that with arguments.length, which returns the actual number of parameters entered. The following function contains a generic check to ensure the user has entered the expected number of parameters into it:
+<pre>
+function trianglearea(b,h){
+	if(arguments.length!=trianglearea.length)
+		alert("Incorrect number of parameters entered. Correct should be " + trianglearea.length);
+	else
+		alert(0.5*b*h);
+}
+
+trianglearea(3,8);
+//alerts 12
+trianglearea(3,8,4);
+//alerts "Incorrect number of parameters entered. Correct should be 2"
+</pre>
+		</td>
 	</tr>
 	<tr>
 		<td>prototype</td>
