@@ -37,82 +37,142 @@
 	<tr>
 		<td>align</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+				Not supported in HTML5. Use style.cssFloat instead.<br>Sets or returns the value of the align attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>alt</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Sets or returns the value of the alt attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>border</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use style.border instead.<br>Sets or returns the value of the border attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>complete</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Returns whether or not the browser is finished loading an image
+		</td>
+	</tr>
+	<tr>
+		<td>crossOrigin</td>
+		<td>屬性</td>
+		<td>
+			Sets or returns the CORS settings of an image
+		</td>
 	</tr>
 	<tr>
 		<td>height</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Sets or returns the value of the height attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>hspace</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use style.margin instead.<br>Sets or returns the value of the hspace attribute of an image
+		</td>
+	</tr>
+	<tr>
+		<td>isMap</td>
+		<td>屬性</td>
+		<td>
+			Sets or returns whether an image should be part of a server-side image-map, or not
+		</td>
 	</tr>
 	<tr>
 		<td>longDesc</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+				Not supported in HTML5.<br>Sets or returns the value of the longdesc attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>lowsrc</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			
+		</td>
 	</tr>
 	<tr>
 		<td>name</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use id instead.<br>Sets or returns the value of the name attribute of an image
+		</td>
+	</tr>
+	<tr>
+		<td>naturalHeight</td>
+		<td>屬性</td>
+		<td>
+			Returns the original height of an image
+		</td>
+	</tr>
+	<tr>
+		<td>naturalWidth</td>
+		<td>屬性</td>
+		<td>
+			Returns the original width of an image
+		</td>
 	</tr>
 	<tr>
 		<td>src</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Sets or returns the value of the src attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>useMap</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Sets or returns the value of the usemap attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>vspace</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use style.margin instead.<br>Sets or returns the value of the vspace attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>width</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Sets or returns the value of the width attribute of an image
+		</td>
 	</tr>
 	<tr>
 		<td>onabort</td>
 		<td>事件屬性</td>
-		<td></td>
+		<td>
+			
+		</td>
 	</tr>
 	<tr>
 		<td>onerror</td>
 		<td>事件屬性</td>
-		<td></td>
+		<td>
+			
+		</td>
 	</tr>
 	<tr>
 		<td>onload</td>
 		<td>事件屬性</td>
-		<td></td>
+		<td>
+			
+		</td>
 	</tr>
 </table>
  </main>

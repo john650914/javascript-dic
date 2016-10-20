@@ -342,11 +342,30 @@ alert(a.lastIndexOf('z')); //返回-1
 			IE8(含)以下不支援<br>
 			傳回每一個陣列元素執行回調函數(callback)後所返回的值的新陣列，範例如下：
 <pre>
-var a1 = ['a','b','c'];
-var a2 = a1.map(function(item){
+var arr = ['a','b','c'];
+var str = arr.map(function(item){
 	return item.toUpperCase();
 });
-alert(a2); //傳回A,B,C
+alert(str); //傳回「A,B,C」
+---------------------------------
+var arr = ['a','b','c'];
+var str ="";
+arr.map(function(item){
+	str += item.toUpperCase();
+});
+alert(str); //傳回「ABC」
+</pre>
+			以下是javascriptkit.com的說明：<br>
+			map(testfunction[thisobj])<br>
+			Returns a new array based on the return value of testfunction() on each of the array elements. Original array is not changed. Use it to transform the values of all elements within an array using some logic and derive the results as a new array.<br>testfunction() is the function reference containing the desired code to execute:
+<pre>
+var numbersarray=[-3, 5, 34, 19]
+
+function doubleIt(element, index, array) {
+ return (element*2)
+}
+
+var doubledarray=numbersarray.map(doubleIt) returns [-6, 10, 68, 38]
 </pre>
 		</td>
 	</tr>

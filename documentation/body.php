@@ -37,22 +37,30 @@
 	<tr>
 		<td>aLink</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. See CSS :active Selector instead.<br>Sets or returns the color of an active link in a document
+		</td>
 	</tr>
 	<tr>
 		<td>background</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use style.backgroundImage instead.<br>Sets or returns the background image for a document
+		</td>
 	</tr>
 	<tr>
 		<td>bgColor</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use style.backgroundColor instead.<br>Sets or returns the background color of a document
+		</td>
 	</tr>
 	<tr>
 		<td>link</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. See CSS :link Selector instead.<br>Sets or returns the color of unvisited links in a document
+		</td>
 	</tr>
 	<tr>
 		<td>offsetHeight</td>
@@ -67,17 +75,23 @@
 	<tr>
 		<td>text</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. Use style.color instead.<br>Sets or returns the color of the text in a document
+		</td>
 	</tr>
 	<tr>
 		<td>vLink</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			Not supported in HTML5. See CSS :visited Selector instead.<br>Sets or returns the color of visited links in a document
+		</td>
 	</tr>
 	<tr>
 		<td>onload</td>
 		<td>事件屬性</td>
-		<td></td>
+		<td>
+			
+		</td>
 	</tr>
 </table>
  </main>

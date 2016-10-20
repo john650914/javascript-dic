@@ -43,9 +43,10 @@
 				<dd><a href="/documentation/document.php">document</a></dd>
 				<dd><a href="/documentation/Events.php">Events</a></dd>
 				<dd><a href="/documentation/DOM-Elements.php">DOM Elements</a></dd>
+				<dd><a href="/documentation/audio.php">Audio</a></dd>
 				<dd><a href="/documentation/body.php">Body</a></dd>
-				<dd><a href="/documentation/form.php">Form</a></dd>
 				<dd><a href="/documentation/button.php">Button</a></dd>
+				<dd><a href="/documentation/form.php">Form</a></dd>
 				<dd><a href="/documentation/input-button.php">Input button</a></dd>
 				<dd><a href="/documentation/input-checkbox.php">Input checkbox</a></dd>
 				<dd><a href="/documentation/input-file.php">Input file</a></dd>
