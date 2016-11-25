@@ -280,7 +280,7 @@ alert(a2); //傳回10,20,30
 		<td>foreach()</td>
 		<td>方法</td>
 		<td>
-			重覆拜訪每個陣列元素，範例如下：
+			ES5新增，重覆拜訪每個陣列元素，範例如下：
 <pre>
 var a = ['a','b','c'];
 a.forEach(alert); //依序傳回每一個項目
@@ -289,6 +289,24 @@ var colors = ['red','green','blue'];
 colors.forEach(function(i){
 	alert(i); //依序傳回每一個項目
 })
+</pre>
+			foreach()只能在陣列上使用，非陣列的物件則會報錯
+<pre>
+var a = [1,2,3];
+a.forEach(function(v, i, self){
+	console.log(v);
+});
+
+var o = {
+	'a': 1,
+	'b': 2,
+	'c': 3
+}
+
+// TypeError! non-array object does not have forEach method.
+o.forEach(function(v, k, self){
+	console.log(v);
+});
 </pre>
 		</td>
 	</tr>
