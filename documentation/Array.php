@@ -280,15 +280,39 @@ alert(a2); //傳回10,20,30
 		<td>foreach()</td>
 		<td>方法</td>
 		<td>
-			ES5新增，重覆拜訪每個陣列元素，範例如下：
+			ES5新增，重覆拜訪每個陣列元素，不會直接修改原始陣列，語法如下：
 <pre>
-var a = ['a','b','c'];
-a.forEach(alert); //依序傳回每一個項目
+array.forEach(function(value, [index], [arr]), [thisValue])
+</pre>
+			下面的範例很智障請見諒：
+<pre>
+// 每一次都會alert
+var names = ['John', 'Leon', 'Scott', 'Brian'];
+names.forEach(function(item, i){
+	alert(i + '. ' + item);
+});
 
-var colors = ['red','green','blue'];
-colors.forEach(function(i){
-	alert(i); //依序傳回每一個項目
-})
+// 只會alert最後一次迴圈的結果
+var names = ['John', 'Leon', 'Scott', 'Brian'];
+var list = '';
+names.forEach(function(item, i){
+	list = i + '. ' + item + '\n';
+});
+alert(list);
+
+// 全部都列出來了
+var names = ['John', 'Leon', 'Scott', 'Brian'];
+var list = '';
+names.forEach(function(item, i){
+	list += i + '. ' + item + '\n';
+});
+alert(list);
+
+// 傳回["John", "Leon", "Scott", "Brian"]
+var names = ['John', 'Leon', 'Scott', 'Brian'];
+names.forEach(function(item, i, ary){
+	console.log(b);
+});
 </pre>
 			foreach()只能在陣列上使用，非陣列的物件則會報錯
 <pre>
@@ -297,11 +321,7 @@ a.forEach(function(v, i, self){
 	console.log(v);
 });
 
-var o = {
-	'a': 1,
-	'b': 2,
-	'c': 3
-}
+var o = {a:1, b:2, c:3}
 
 // TypeError! non-array object does not have forEach method.
 o.forEach(function(v, k, self){

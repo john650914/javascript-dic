@@ -307,11 +307,20 @@ console.log(add.call(o, 20, 30)); // 輸出：60
 	<tr>
 		<td>return</td>
 		<td>關鍵字</td>
-		<td>返回函式中的值。以下範例(1)將傳回兩數的合。<br />
-		例1：function sum(num1,num2){return num1+num2; alert("text");} alert(sum(2,3));<br />
-		注意：在return以後的程式區段將不會被執行。例如，此例中sum()被呼叫後text並沒有被alert出來。<br />
-		另一種情況，如果函數中本身沒有返回值，但又希望在某些時候退出函數，則可以使用沒有參數的return語句來隨時退出函數，如下例(2)。<br />
-		例2：function sum(theName){if(theName == "bye"){return;} alert(theName);} sum("bye");</td>
+		<td>
+			返回函式中的值。以下範例(1)將傳回兩數的合。<br />
+			例1：function sum(num1,num2){return num1+num2; alert("text");} alert(sum(2,3));<br />
+			注意：在return以後的程式區段將不會被執行。例如，此例中sum()被呼叫後text並沒有被alert出來。<br />
+			另一種情況，如果函數中本身沒有返回值，但又希望在某些時候退出函數，則可以使用沒有參數的return語句來隨時退出函數，如下例(2)。<br />
+			例2：function sum(theName){if(theName == "bye"){return;} alert(theName);} sum("bye");<br><br>
+			return false：<br>
+			防止瀏覽器預設的行為，例如點擊連結標籤時取消連結、取消表單的送出等，如下例：
+<pre>
+&lt;a href="http://www.google.com" onclick="console.log('The link was clicked.'); return false"&gt;
+	點我！
+&lt;/a&gt;
+</pre>
+		</td>
 	</tr>
 </table>
  </main>

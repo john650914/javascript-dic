@@ -228,7 +228,16 @@ x remains x
 		<tr>
 			<td>&amp;&amp;</td>
 			<td>邏輯運算子</td>
-			<td>數筆條件皆為真時則傳回true，反之傳回false。例：alert(2&lt;7 &amp;&amp; 8&lt;12 &amp;&amp; 1&lt;2); 傳回true。</td>
+			<td>
+				數筆條件皆為真時則傳回true，反之傳回false。例：
+<pre>
+alert(2&lt;7 &amp;&amp; 8&lt;12 &amp;&amp; 1&lt;2); 傳回true。
+</pre>
+				&amp;&amp;另外有一種很另類的用法，<span style="text-decoration:line-through;">讓我覺的Javascript好像發瘋了，</span>在&amp;&amp;之前加上判斷式，如果判斷為true，&amp;&amp;之後的語法就會執行，如下例：
+<pre>
+true &amp;&amp; alert(123);
+</pre>
+			</td>
 		</tr>
 		<tr>
 			<td>||</td>
