@@ -116,7 +116,12 @@ alert(myString.indexOf("i",5)); //返回11
 alert(myString.indexOf("inc")); //返回-1
 alert(myString.indexOf("ING")); //返回-1
 </pre>
-			範例2：判斷字串中是否包含某些字元
+			帶入空的字串將傳回0：
+<pre>
+var myStr = 'This is a string.';
+alert(myStr.indexOf('')); //傳回0
+</pre>
+			判斷字串中是否包含某些字元：
 <pre>
 var myString = 'http://www.yahoo.com.tw';
 if(myString.indexOf('http://')==-1){

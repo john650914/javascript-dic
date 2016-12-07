@@ -141,7 +141,20 @@ c: 789*/
 		<td>break</td>
 		<td>關鍵字</td>
 		<td>使用break可以立即跳出迴圈，阻止再次執行循環體中的任何程式碼，或是像switch條件式中斷程式區塊。<br>
-		範例如下：
+		範例1：
+<pre>
+var sum = 0;
+for(var i=0; i<5; i++){
+	if(i > 2){
+		alert('迴圈要停了');
+		break;
+	}
+	sum += i;
+	alert('i='+i);
+}
+alert('總合是：'+sum);
+</pre>
+		範例2：
 <pre>
 window.onload = function(){
 	var inputArray = new Array();

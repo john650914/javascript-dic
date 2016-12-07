@@ -308,17 +308,61 @@ console.log(add.call(o, 20, 30)); // 輸出：60
 		<td>return</td>
 		<td>關鍵字</td>
 		<td>
-			返回函式中的值。以下範例(1)將傳回兩數的合。<br />
-			例1：function sum(num1,num2){return num1+num2; alert("text");} alert(sum(2,3));<br />
-			注意：在return以後的程式區段將不會被執行。例如，此例中sum()被呼叫後text並沒有被alert出來。<br />
-			另一種情況，如果函數中本身沒有返回值，但又希望在某些時候退出函數，則可以使用沒有參數的return語句來隨時退出函數，如下例(2)。<br />
-			例2：function sum(theName){if(theName == "bye"){return;} alert(theName);} sum("bye");<br><br>
-			return false：<br>
-			防止瀏覽器預設的行為，例如點擊連結標籤時取消連結、取消表單的送出等，如下例：
+			返回函式中的值。以下範例將傳回兩數的加總：
+<pre>
+function sum(num1,num2){
+	return num1+num2;
+	alert("text");
+}
+alert(sum(2,3));
+</pre>
+
+			注意：在程式區段中return以後的程式將不會被執行，例如上例中sum()被呼叫後text並沒有被alert出來。<br><br>
+			依照上例，return的scope(context)看起來是在function內，<span style="text-decoration:line-through;">我原本以為是在花括弧內，</span>例如下例參數大於10的時候第二個if條件式的程式就沒有被執行：
+<pre>
+function test(arg){
+	if(arg > 10){
+		alert('參數大於10喔！');
+		return;
+	}
+	if(true){
+		alert('參數大於10這個alert就被卡掉了');
+	}
+}
+test(11);
+</pre>
+			另一種情況，如果函數中本身沒有返回值，但又希望在某些時候退出函數，則可以使用沒有參數的return語句來隨時退出函數，下例：
+<pre>
+function sum(theName){
+	if(theName == "bye"){
+		return;
+	}
+	alert(theName);
+}
+sum("bye");
+</pre>
+			
+return false：防止瀏覽器預設的行為，例如點擊連結標籤時取消連結、取消表單的送出等，如下例：
 <pre>
 &lt;a href="http://www.google.com" onclick="console.log('The link was clicked.'); return false"&gt;
 	點我！
 &lt;/a&gt;
+</pre>
+			return也可以傳回function中的物件，如下例：
+<pre>
+// 在returnFN()裡新增mth()方法
+function returnFN(){
+	return {mth: function(arg1, arg2){
+		return arg1 + arg2;
+	}};
+}
+alert(returnFN().mth(1, 1));
+
+// 在returnObj()裡新增obj()物件
+function returnObj(){
+	return {obj: 'text'};
+}
+alert(returnObj().obj);
 </pre>
 		</td>
 	</tr>
