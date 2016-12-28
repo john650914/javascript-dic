@@ -343,7 +343,12 @@ for (var i=0, y=0; i&lt;5; i++, y+=2){
 <pre>
 (1+1==5)?alert("答對了"):alert("答錯了");
 </pre>
-				註：小括號是可以省略的
+				註：小括號是可以省略的<br><br>
+				範例2，將判斷結果存入變數：
+<pre>
+var isIE = window.ActiveXObject ? '這是IE瀏覽器' : '這不是IE瀏覽器';
+alert(isIE);
+</pre>
 			</td>
 		</tr>
 		<tr>
