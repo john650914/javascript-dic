@@ -52,7 +52,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<table class="api-table">
 		<CAPTION>Basic Syntax</CAPTION>
 		<tr>
-			<td rowspan="6">Operators</td>
+			<td rowspan="7">Operators</td>
 			<td>算術運算子</td>
 			<td>
 				<a href="/documentation/Operators.php">+</a>
@@ -64,6 +64,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<a href="/documentation/Operators.php">--</a>
 				<a href="/documentation/Operators.php">(-)</a>
 				<a href="/documentation/Operators.php">(+)</a>
+			</td>
+		</tr>
+		<tr>
+			<td>展開運算子</td>
+			<td>
+				<a href="/documentation/Operators.php">...</a>
 			</td>
 		</tr>
 		<tr>
