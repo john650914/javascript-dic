@@ -166,6 +166,154 @@ x remains x
 			</td>
 		</tr>
 		<tr>
+			<td>...</td>
+			<td>展開運算子</td>
+			<td>
+				展開運算子(Spread Operator)是ES6中的其中一種新特性。也是懶人必學的Javascript新語法之一，它的語法是「...」(就是點點點沒錯)，但在不同的情境會分成兩種用法，展開函式的其餘參數，或是展開陣列的值，以下分別做說明：<br><br>
+				<strong>其餘參數運算(Rest Operator)：</strong><br></br>
+				用在函式中的參數，當我們不確定傳入參數的數量時就可以使用其餘參數運算子，<u>它會將帶入的參數轉換成一個陣列</u>，如下例：
+<pre>
+var result = 0;
+function sum(...numbers){
+	numbers.forEach(function(value, index){
+		result += value
+	});
+	return result;
+}
+alert(sum(1,2,3,4,5)); //15
+
+result = 0
+alert(sum(1,2)); //3
+</pre>
+				注意，其餘參數運算子有一個限制，就是這個參數一定是函式的"最後一個"。你如果放在其它參數前，就會產生錯誤。<br><br>
+				在ES5中可以使用arguments物件來達到這樣的功能，它是一個類似陣列(Array-like)的物件，如下例：
+<pre>
+function sum() {
+	var numbers = Array.prototype.slice.call(arguments),
+		result = 0;
+	numbers.forEach(function (number) {
+		result += number;
+	});
+	return result;
+}
+alert(sum(1,2)); //3
+alert(sum(1, 2, 3, 4, 5)); //15
+</pre>
+				使用其餘參數運算子和arguments物件結果還是有部份差異，這裡不做討論，但使用其餘參數好處就是語法簡單易讀，不像arguments物件容易造成混亂。<br><br><br>
+				<strong>其餘參數運算(Rest Operator)：</strong><br></br>
+				用於陣列的操作，展開運算子會把一個陣列展開(expand)成個別的值，常用來組合(連接)陣列，範例如下：
+<pre>
+var params = [ "hello", true, 7 ];
+console.log([ 1, 2, ...params ]); //[1, 2, "hello", true, 7]
+
+var str = "foo";
+console.log([...str]); //["f", "o", "o"]
+
+console.log(1, ...[2, 3, 4], 5); //1 2 3 4 5
+</pre>
+				我們也可以把陣列展開後直接做為函式的參數，如下例：
+<pre>
+var ary = [1, 2, 3];
+function sum(a, b, c){
+	return a+b+c;
+}
+console.log(sum(...ary)); //6
+
+// 補充另一個範例：
+function f(...[a, b, c]) {
+	return a + b + c;
+}
+f(1)          // NaN (b and c are undefined)
+f(1, 2, 3)    // 6
+f(1, 2, 3, 4) // 6 (the fourth parameter is not destructured)
+</pre>
+				在ES5中如需要將陣列做為函式的參數則必需使用apply()方法來達到這樣的功能，如下例：
+<pre>
+function sum(a, b, c) {
+  return a + b + c;
+}
+var args = [1, 2, 3];
+console.log(sum.apply(undefined, args)); // 6
+</pre>
+				和其餘運算子相同，使用新的展開運算子語法語法簡單易讀，下表把各種常見的使用情況分別以ES5、ES6列出來：<br><br>
+				<table style="width:100%; white-space:nowrap;">
+					<caption>這表要想一下RWD要怎麼表現</caption>
+					<tr>
+						<th>情況</th>
+						<th>ES5</th>
+						<th>ES6</th>
+					</tr>
+					<tr>
+						<td>Concatenation</td>
+						<td>[1, 2].concat(more)</td>
+						<td>[1, 2, ...more]</td>
+					</tr>
+					<tr>
+						<td>String Split</td>
+						<td>chars = str.split("")</td>
+						<td>chars = [ ...str ]</td>
+					</tr>
+					<tr>
+						<td>Push onto list</td>
+						<td>list.push.apply(list, [3, 4])</td>
+						<td>list.push(...[3, 4])</td>
+					</tr>
+					<tr>
+						<td>Destructuring</td>
+						<td>a = list[0], rest = list.slice(1)</td>
+						<td>[a, ...rest] = list</td>
+					</tr>
+					<tr>
+						<td>new + apply</td>
+						<td>new (Date.bind.apply(Date, [null,2015,31,8]))</td>
+						<td>new Date(...[2015,31,8])</td>
+					</tr>
+				</table>
+				<br>展開運算子可以將一個類陣列物件中索引範圍在[ 0, length)之間的所有屬性的值添加到一個陣列中，這樣就可以得到一個真正的陣列：
+<pre>
+var nodeList = document.querySelectorAll('div');
+var ary = [...nodeList];
+console.log(ary); //[div, div, div]
+</pre>
+				解構賦值(destructuring)時，解構賦值在另一獨立章節會講得更詳細，這裡只是要說明展開運算子的另一個使用情況。解構賦值也是一個ES6中的新特性。
+解構賦值是用在「陣列指定陣列」或是「物件指定物件」的情況下，這個時候會根據陣列原本的結構，以類似「鏡子」對映樣式(pattern)來進行賦值。聽起來很玄但用起來很簡單，這是一種為了讓陣列與物件指定值時更方便所設計的一種語法。例如以下的範例：
+<pre>
+const [x, y, z] = [1, 2, 3]
+console.log(x) //1
+</pre>
+				當使用其餘運算符之後，就可以用像其餘參數的類似概念來進行解構賦值，例如以下的範例：
+<pre>
+const [x, ...y] = [1, 2, 3];
+console.log("x："+x); //1
+console.log("y："+y); //[2,3]
+</pre>
+				當右邊的值與左邊數量不相等時，「鏡子對映的樣式」就會有些沒對到，用了其餘運算符的那個識別名稱，就會變成空陣列。就會像下面這個例子一樣
+<pre>
+const [x, y, ...z] = [1]
+console.log(x) //1
+console.log(y) //undefined
+console.log(z) //[]
+</pre>
+				<strong>有可能遇見其它的狀況：</strong><br><br>
+				展開運算子僅能在陣列上操作，但我們有可能在一些新的JS框架中會看到用在物件上的類似語法，例如Redux、React-Native，但它們是還在制定中的ES7語法，現今瀏覽器是不支援需要作預先編譯的，例如babel轉換工具，它們稱為其餘屬性(Rest Properties)與展開屬性(Spread Properties)，像下面這樣的程式碼：
+<pre>
+// Rest Properties
+let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 }
+console.log(x) // 1
+console.log(y) // 2
+console.log(z) // { a: 3, b: 4 }
+
+// Spread Properties
+let n = { x, y, ...z }
+console.log(n) // { x: 1, y: 2, a: 3, b: 4 }
+</pre>
+				參考資料：<br>
+				https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator<br>
+				http://eddychang.me/blog/16-javascript/45-spread-operator-rest-parameters.html<br>
+				https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/rest_spread.html
+			</td>
+		</tr>
+		<tr>
 			<td>=</td>
 			<td>指派運算子</td>
 			<td></td>
