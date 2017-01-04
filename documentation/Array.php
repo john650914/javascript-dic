@@ -62,7 +62,17 @@ var cellFuncs = [
 ];
 alert(cellFuncs[2](5)); //返回15
 </pre>
-			關聯陣列(Assocation Array)又稱作 Map 或 Dictionary，是一種物件容器，以「{}」包起來，其中可以放置許多的key-value pair，以存取子物件。在Javascript中，物件本身就可以作為關連陣列。下例將前一個範例以關聯陣列來改寫：<br>
+			陣列輸出的特性我個人覺得滿奇怪的，沒有經過操作會直接把值全部列出來，然後類型還不是字串…：
+<pre>
+var ary = [1, 2, 3];
+alert(ary); // 1,2,3，alert的結果看起來像字串但不是
+console.log(ary); // [1, 2, 3]，在console裡就看的到是以[]包起來的陣列物件
+console.log(typeof ary) // object，typeof傳回物件
+console.log(ary.join()); // 1,2,3，但這裡使用join()轉為字串了
+console.log(typeof ary.join()); // string，typeof就看出是字串
+</pre>
+			下面用&lt;strike&gt;包起來的部份應該要放到object裡的<br>
+			<strike>關聯陣列(Assocation Array)又稱作 Map 或 Dictionary，是一種物件容器，以「{}」包起來，其中可以放置許多的key-value pair，以存取子物件。在Javascript中，物件本身就可以作為關連陣列。下例將前一個範例以關聯陣列來改寫：<br>
 <pre>
 var myFuncs = {
 	a:function(data){return data*1;},
@@ -83,8 +93,8 @@ obj2 = {
 obj2.showName(); //顯示Edward
 obj2.age = 23; //屬性可以動態加入
 </pre>
-			其中obj1儲存了三個子元素，其鍵(key)為"a","b"與"c"，而值(value)為"Athens","Belgrade"與"Cairo"。obj2中showName鍵所對應的值為function，因此obj2.showName()即為函式呼叫。
-			<hr>
+			其中obj1儲存了三個子元素，其鍵(key)為"a","b"與"c"，而值(value)為"Athens","Belgrade"與"Cairo"。obj2中showName鍵所對應的值為function，因此obj2.showName()即為函式呼叫。</strike>
+			<br><br>
 			我們常常會使用for迴圈一次訪問所有的陣列元素並加以處理，範例如下：
 <pre>
 var myCars = ["Saab","Volvo","BMW"];
@@ -377,33 +387,45 @@ alert(a.lastIndexOf('z')); //返回-1
 		<td>map()</td>
 		<td>方法</td>
 		<td>
-			IE8(含)以下不支援<br>
-			傳回每一個陣列元素執行回調函數(callback)後所返回的值的新陣列，範例如下：
+			傳回每個陣列元素執行回調函式(callback)後的新陣列，IE8(含)以下不支援，語法如下：
 <pre>
-var arr = ['a','b','c'];
-var str = arr.map(function(item){
-	return item.toUpperCase();
-});
-alert(str); //傳回「A,B,C」
----------------------------------
-var arr = ['a','b','c'];
-var str ="";
-arr.map(function(item){
-	str += item.toUpperCase();
-});
-alert(str); //傳回「ABC」
+array.map(function(currentValue, index, arr), thisValue)
 </pre>
-			以下是javascriptkit.com的說明：<br>
-			map(testfunction[thisobj])<br>
-			Returns a new array based on the return value of testfunction() on each of the array elements. Original array is not changed. Use it to transform the values of all elements within an array using some logic and derive the results as a new array.<br>testfunction() is the function reference containing the desired code to execute:
+			範例1，將letters中每個字元轉為大寫後傳回一個新的陣列：
 <pre>
-var numbersarray=[-3, 5, 34, 19]
+var letters = ['a', 'b', 'c'];
+var newArray = letters.map(function(value){
+	return value.toUpperCase();
+});
+console.log(newArray); // 傳回["A", "B", "C"]
+</pre>
+			範例2，w3schools.com的範例，沒有使用回調函式也不用將value代入Math.sqrt()中就將value做平方根，好像是什麼奇妙的語法，有機會可能需要研究一下：
+<pre>
+var numbers = [4, 9, 16, 25];
+console.log(numbers.map(Math.sqrt)); // 傳回[2, 3, 4, 5]
+</pre>
+			範例3，在陣列中取得每個人的全名：
+<pre>
+var persons = [
+	{firstname : "Malcom", lastname: "Reynolds"},
+	{firstname : "Kaylee", lastname: "Frye"},
+	{firstname : "Jayne", lastname: "Cobb"}
+];
 
+console.log(
+	persons.map(function(item){
+		return [item.firstname, item.lastname].join(" ");
+	})
+); // 傳回["Malcom Reynolds", "Kaylee Frye", "Jayne Cobb"]
+</pre>
+			範例4，將陣列中每個item剩以2後傳回一個新的陣列：
+<pre>
+var numbersArray=[-3, 5, 34, 19];
 function doubleIt(element, index, array) {
- return (element*2)
+	return (element*2)
 }
-
-var doubledarray=numbersarray.map(doubleIt) returns [-6, 10, 68, 38]
+var doubledarray = numbersArray.map(doubleIt);
+console.log(doubledarray); // 傳回[-6, 10, 68, 38]
 </pre>
 		</td>
 	</tr>
