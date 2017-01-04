@@ -4,15 +4,15 @@ $(function(){
 		$('main').toggle();
 	});
 	
-	$('#data-loader').load('experiment/ajax01.php');
+	/*$('#data-loader').load('experiment/ajax01.php');
 	
 	$(window).scroll(function(){
 		if($('#data-loader2').html() == '' && $('body').scrollTop() > 100){
 			$('#data-loader2').load('experiment/ajax02.php');
 		}
-	});
+	});*/
 
-	if(location.hash.match('!')){
+	/*if(location.hash.match('!')){
 		var excmtIndex = location.hash.indexOf('!')+1;
 		var theHashName = location.hash.slice(excmtIndex);
 		var xhr;
@@ -33,5 +33,5 @@ $(function(){
 			$('meta[property="og:description"]').attr('content', description);
 			$('meta[property="og:url"]').attr('content', url);
 		});
-	}
+	}*/
 });
