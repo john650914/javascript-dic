@@ -28,9 +28,11 @@
 				<dd><a href="/documentation/Date.php">Date</a></dd>
 				<dd><a href="/documentation/Function.php">Function</a></dd>
 				<dd><a href="/documentation/Error.php">Error</a></dd>
+				<dd><a href="/documentation/Map.php">Map</a></dd>
 				<dd><a href="/documentation/Math.php">Math</a></dd>
 				<dd><a href="/documentation/Number.php">Number</a></dd>
 				<dd><a href="/documentation/object-object.php">Object</a></dd>
+				<dd><a href="/documentation/Set.php">Set</a></dd>
 				<dd><a href="/documentation/String.php">String</a></dd>
 				<dd><a href="/documentation/RegExp.php">RegExp</a></dd>
 				<dt>BOM Objects</dt>

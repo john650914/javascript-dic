@@ -287,7 +287,7 @@ alert(a2); //傳回10,20,30
 		</td>
 	</tr>
 	<tr>
-		<td>foreach()</td>
+		<td>forEach()</td>
 		<td>方法</td>
 		<td>
 			ES5新增，重覆拜訪每個陣列元素，不會直接修改原始陣列，語法如下：
@@ -318,11 +318,11 @@ names.forEach(function(item, i){
 });
 alert(list);
 
-// 傳回["John", "Leon", "Scott", "Brian"]
-var names = ['John', 'Leon', 'Scott', 'Brian'];
-names.forEach(function(item, i, ary){
-	console.log(b);
-});
+<strike>// 傳回["John", "Leon", "Scott", "Brian"]
+	var names = ['John', 'Leon', 'Scott', 'Brian'];
+	names.forEach(function(item, i, ary){
+		console.log(b);
+	});</strike>
 </pre>
 			foreach()只能在陣列上使用，非陣列的物件則會報錯
 <pre>
@@ -332,11 +332,27 @@ a.forEach(function(v, i, self){
 });
 
 var o = {a:1, b:2, c:3}
-
-// TypeError! non-array object does not have forEach method.
 o.forEach(function(v, k, self){
-	console.log(v);
+	console.log(v); // TypeError! non-array object does not have forEach method.
 });
+</pre>
+		</td>
+	</tr>
+	<tr>
+		<td>from()</td>
+		<td>方法</td>
+		<td>
+			將 Set 結構轉為陣列，如下例：
+<pre>
+var items = new Set([1, 2, 3, 4, 5]);
+var array = Array.from(items);
+</pre>
+			去除陣列重複值的方法：
+<pre>
+function dedupe(array) {
+  return Array.from(new Set(array));
+}
+dedupe([1,1,2,3]) // [1, 2, 3]
 </pre>
 		</td>
 	</tr>

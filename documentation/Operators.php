@@ -200,7 +200,7 @@ alert(sum(1,2)); //3
 alert(sum(1, 2, 3, 4, 5)); //15
 </pre>
 				使用其餘參數運算子和arguments物件結果還是有部份差異，這裡不做討論，但使用其餘參數好處就是語法簡單易讀，不像arguments物件容易造成混亂。<br><br><br>
-				<strong>其餘參數運算(Rest Operator)：</strong><br></br>
+				<strong>展開陣列運算(Spread Operator)：</strong><br></br>
 				用於陣列的操作，展開運算子會把一個陣列展開(expand)成個別的值，常用來組合(連接)陣列，範例如下：
 <pre>
 var params = [ "hello", true, 7 ];

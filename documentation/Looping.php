@@ -28,6 +28,10 @@
 ?>
 <main class="main">
 <h1>Javascript - Looping</h1>
+<p>
+重要參考：<br>
+http://rocksaying.tw/archives/2015/ES6_for-of_and_iterator.html
+</p>
 <table class="doc-table">
 	<tr>
 		<th>名稱</th>
@@ -108,18 +112,23 @@ window.onload = function(){
 		<td>關鍵字</td>
 		<td>for...in通常用來列舉物件的屬性。語法如下：
 <pre>
-for(property in object){statement;}
+for(key in object){statement;}
 </pre>
-			它用來瀏覽object中的所有屬性，並且每一個屬性都執行一次statement循環體；例如我們需要列出window物件的所有屬性，儘管並不知道window物件到底有多少屬性，以及每個屬性相對應的名稱，但透過for...in語句便可以很輕地獲得各種參數如下例將列出window的所有物件：
+			它用來瀏覽 object 中的所有屬性，並且每一個屬性都執行一次 statement 循環體；例如我們需要列出 window 物件的所有屬性，儘管並不知道 window 物件到底有多少屬性，以及每個屬性相對應的名稱，但透過 for...in 語句便可以很輕地獲得各種參數如下例將列出 window 的所有物件：
 <pre>
 for(var key in window){
-	document.write(key+": "+window[key]+"&lt;br /&gt;");
+	document.write(key+": "+window[key]+"&lt;br /&gt;"); // 一次列出所有window的屬性及值
 }
 </pre>
-			由於Javascript所有東西都可以視為物件，for...in語句也適用於自訂的物件，如下例依序傳回每個陣列元素的值：
+			範例2：用於自訂的物件，如下例依序傳回每個陣列元素的值：
 <pre>
-var mycars = ["Saab","Volvo","BMW"];
+var mycars = [ "Saab", "Volvo", "BMW" ];
 for(x in mycars){alert(mycars[x]);} //依序傳回每個陣列元素的值
+
+var prices = { apple: 15, pen: 18, pinapple: 120 }
+for(var key in prices){
+	alert(key+": "+prices[key]); // 分次alert出prices的鍵及值
+}
 </pre>
 			我們也可以將for...in寫成一個自訂函數方便調用，如下例：
 <pre>
@@ -135,6 +144,13 @@ a: 123
 b: 456
 c: 789*/
 </pre>
+		</td>
+	</tr>
+	<tr>
+		<td>for/of</td>
+		<td>關鍵字</td>
+		<td>
+			dfg erg ddnf dgg dhfg f
 		</td>
 	</tr>
 	<tr>

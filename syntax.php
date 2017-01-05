@@ -408,6 +408,38 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			</td>
 		</tr>
 		<tr>
+			<td rowspan="4">Map</td>
+			<td>物件</td>
+			<td>
+				<a href="/documentation/Map.php">Map</a>
+			</td>
+		</tr>
+		<tr>
+			<td>屬性</td>
+			<td>
+				<a href="/documentation/Map.php">size</a>
+			</td>
+		</tr>
+		<tr>
+			<td>方法</td>
+			<td>
+				<a href="/documentation/Map.php">clear()</a>
+				<a href="/documentation/Map.php">delete()</a>
+				<a href="/documentation/Map.php">get()</a>
+				<a href="/documentation/Map.php">has()</a>
+				<a href="/documentation/Map.php">set()</a>
+			</td>
+		</tr>
+		<tr>
+			<td>遍歷方法</td>
+			<td>
+				<a href="/documentation/Map.php">entries()</a>
+				<a href="/documentation/Map.php">forEach()</a>
+				<a href="/documentation/Map.php">keys()</a>
+				<a href="/documentation/Map.php">values()</a>
+			</td>
+		</tr>
+		<tr>
 			<td rowspan="3">Math</td>
 			<td>物件</td>
 			<td>
@@ -513,7 +545,37 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<a href="/documentation/object-object.php">toJSON()</a>
 			</td>
 		</tr>
-		
+		<tr>
+			<td rowspan="4">Set</td>
+			<td>物件</td>
+			<td>
+				<a href="/documentation/Set.php">Set</a>
+			</td>
+		</tr>
+		<tr>
+			<td>屬性</td>
+			<td>
+				<a href="/documentation/Set.php">size</a>
+			</td>
+		</tr>
+		<tr>
+			<td>方法</td>
+			<td>
+				<a href="/documentation/Set.php">add()</a>
+				<a href="/documentation/Set.php">clear()</a>
+				<a href="/documentation/Set.php">delete()</a>
+				<a href="/documentation/Set.php">has()</a>
+			</td>
+		</tr>
+		<tr>
+			<td>遍歷方法</td>
+			<td>
+				<a href="/documentation/Set.php">entries()</a>
+				<a href="/documentation/Set.php">forEach()</a>
+				<a href="/documentation/Set.php">keys()</a>
+				<a href="/documentation/Set.php">values()</a>
+			</td>
+		</tr>
 		<tr>
 			<td rowspan="4">String</td>
 			<td>物件</td>
