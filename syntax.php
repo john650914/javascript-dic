@@ -340,6 +340,25 @@
 			</td>
 		</tr>
 		<tr>
+			<td rowspan="2">Error</td>
+			<td>物件</td>
+			<td>
+				<a href="/documentation/Error.php">Error</a>
+			</td>
+		</tr>
+		<tr>
+			<td>屬性</td>
+			<td>
+				<a href="/documentation/Error.php">constructor</a>
+				<a href="/documentation/Error.php">description</a>
+				<a href="/documentation/Error.php">message</a>
+				<a href="/documentation/Error.php">name</a>
+				<a href="/documentation/Error.php">toSource</a>
+				<a href="/documentation/Error.php">toString</a>
+				<a href="/documentation/Error.php">valueOf</a>
+			</td>
+		</tr>
+		<tr>
 			<td rowspan="5">Function</td>
 			<td>物件</td>
 			<td>
@@ -375,22 +394,18 @@
 			</td>
 		</tr>
 		<tr>
-			<td rowspan="2">Error</td>
+			<td rowspan="2">JSON</td>
 			<td>物件</td>
 			<td>
-				<a href="/documentation/Error.php">Error</a>
+				<a href="/documentation/JSON.php">JSON</a>
 			</td>
 		</tr>
 		<tr>
-			<td>屬性</td>
+			<td>JSON方法</td>
 			<td>
-				<a href="/documentation/Error.php">constructor</a>
-				<a href="/documentation/Error.php">description</a>
-				<a href="/documentation/Error.php">message</a>
-				<a href="/documentation/Error.php">name</a>
-				<a href="/documentation/Error.php">toSource</a>
-				<a href="/documentation/Error.php">toString</a>
-				<a href="/documentation/Error.php">valueOf</a>
+				<a href="/documentation/JSON.php">stringify(obj, [replacer], [space])</a>
+				<a href="/documentation/JSON.php">parse(string, [reviver])</a>
+				<a href="/documentation/JSON.php">toJSON()</a>
 			</td>
 		</tr>
 		<tr>
@@ -498,7 +513,7 @@
 		</tr>
 		
 		<tr>
-			<td rowspan="4">Object</td>
+			<td rowspan="3">Object</td>
 			<td>物件</td>
 			<td>
 				<a href="/documentation/object-object.php">Object</a>
@@ -521,14 +536,6 @@
 				<a href="/documentation/object-object.php">toLocaleString()</a>
 				<a href="/documentation/object-object.php">toString()</a>
 				<a href="/documentation/object-object.php">valueOf()</a>
-			</td>
-		</tr>
-		<tr>
-			<td>JSON方法</td>
-			<td>
-				<a href="/documentation/object-object.php">stringify(obj, [replacer], [space])</a>
-				<a href="/documentation/object-object.php">parse(string, [reviver])</a>
-				<a href="/documentation/object-object.php">toJSON()</a>
 			</td>
 		</tr>
 		<tr>

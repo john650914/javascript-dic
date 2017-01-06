@@ -659,36 +659,6 @@ document.write( empty );
 			A method that's typically called implicitly by JavaScript whenever you call an object within the context in which a primitive value is expected. Rarely if ever called explicitly.
 		</td>
 	</tr>
-	<tr>
-		<td>stringify(obj, [replacer], [space])</td>
-		<td>JSON方法</td>
-		<td>
-			Converts a JavaScript object into a JSON string. For example:<br>
-			……………………<br>
-			……………………<br>
-			<a href="http://www.javascriptkit.com/jsref/json.shtml">http://www.javascriptkit.com/jsref/json.shtml</a>
-		</td>
-	</tr>
-	<tr>
-		<td>parse(string, [reviver])</td>
-		<td>JSON方法</td>
-		<td>
-			Converts a JSON string into a JavaScript object. For example:<br>
-			……………………<br>
-			……………………<br>
-			<a href="http://www.javascriptkit.com/jsref/json.shtml">http://www.javascriptkit.com/jsref/json.shtml</a>
-		</td>
-	</tr>
-	<tr>
-		<td>toJSON()</td>
-		<td>JSON方法</td>
-		<td>
-			toJSON() dictates how a JSON string will be serialized when JSON.stringify() is called. If this method is defined within the JSON object, its return value will be used by JSON.stringify() to form the new JSON string.<br>
-			……………………<br>
-			……………………<br>
-			<a href="http://www.javascriptkit.com/jsref/json.shtml">http://www.javascriptkit.com/jsref/json.shtml</a>
-		</td>
-	</tr>
 </table>
 </main>
 </body>

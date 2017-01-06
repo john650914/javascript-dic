@@ -9,9 +9,9 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://javascript.john650914.com" />
 <meta property="og:image" content="http://javascript.john650914.com/images/fb.jpg" />
-<meta name="keywords" content="Javascript,String,字串,物件,object,字典,方法,屬性,使用說明,文件,範例" />
-<meta name="description" content="提供完整的String物件及其方法、屬性的說明文件與範例" />
-<title>String物件 - Javascript字典</title>
+<meta name="keywords" content="Javascript,Set,物件,object,字典,方法,屬性,使用說明,文件,範例" />
+<meta name="description" content="提供完整的Set物件及其方法、屬性的說明文件與範例" />
+<title>Set物件 - Javascript字典</title>
 <link type="text/css" rel="stylesheet" href="../css/default.css"/>
 <?php
 	include("../includes/analyticstracking.php");

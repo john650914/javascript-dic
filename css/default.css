@@ -57,6 +57,7 @@ ol, ul{margin-left:15px;}
 .api-table a{margin:0 12px 0 0px; position:relative; text-decoration:none; font-family:arial;}
 .api-table a:after{border-left:1px solid #dadada; content:""; position:absolute; right:-8px; top:3px; height:11px;}
 .api-table a:last-child:after{display:none;}
+.api-table a:hover{color:orange;}
 .doc-table pre hr{border-bottom:1px solid gray;}
 .index-h1{font-size:30px; font-weight:normal; margin-bottom:20px;}
 .intro_{font-size:13px;}

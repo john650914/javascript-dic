@@ -26,8 +26,9 @@
 				<dd><a href="/documentation/Array.php">Array</a></dd>
 				<dd><a href="/documentation/Boolean.php">Boolean</a></dd>
 				<dd><a href="/documentation/Date.php">Date</a></dd>
-				<dd><a href="/documentation/Function.php">Function</a></dd>
 				<dd><a href="/documentation/Error.php">Error</a></dd>
+				<dd><a href="/documentation/Function.php">Function</a></dd>
+				<dd><a href="/documentation/JSON.php">JSON</a></dd>
 				<dd><a href="/documentation/Map.php">Map</a></dd>
 				<dd><a href="/documentation/Math.php">Math</a></dd>
 				<dd><a href="/documentation/Number.php">Number</a></dd>
