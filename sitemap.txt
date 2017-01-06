@@ -38,6 +38,7 @@ http://javascript.john650914.com/documentation/link.php
 http://javascript.john650914.com/documentation/location.php
 http://javascript.john650914.com/documentation/Looping.php
 http://javascript.john650914.com/documentation/Math.php
+http://javascript.john650914.com/documentation/Map.php
 http://javascript.john650914.com/documentation/meta.php
 http://javascript.john650914.com/documentation/navigator.php
 http://javascript.john650914.com/documentation/Number.php
@@ -49,6 +50,7 @@ http://javascript.john650914.com/documentation/Others.php
 http://javascript.john650914.com/documentation/RegExp.php
 http://javascript.john650914.com/documentation/screen.php
 http://javascript.john650914.com/documentation/select.php
+http://javascript.john650914.com/documentation/Set.php
 http://javascript.john650914.com/documentation/Statements.php
 http://javascript.john650914.com/documentation/String.php
 http://javascript.john650914.com/documentation/style.php
