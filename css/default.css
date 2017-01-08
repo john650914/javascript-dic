@@ -42,7 +42,7 @@ ol, ul{margin-left:15px;}
 .doc-table{width:100%; font-size:13px; table-layout:fixed; line-height:22px;}
 .doc-table tr.gray{color:silver;}
 .doc-table th{background:#f1f1f1;}
-.doc-table td, .doc-table th{border:1px solid gray; text-align:left; padding:4px 6px; vertical-align:top; word-wrap:break-word; word-break:break-all;}
+.doc-table td, .doc-table th{border:1px solid gray; text-align:left; padding:4px 6px; vertical-align:top; word-wrap:break-word; /* word-break:break-all; */}
 .doc-table tr th:nth-child(1), .doc-table tr td:nth-child(1){width:130px;}
 .doc-table tr th:nth-child(2), .doc-table tr td:nth-child(2){width:100px;}
 .doc-table .upper{font-size:9px; vertical-align:super;}

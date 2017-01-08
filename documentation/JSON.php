@@ -70,17 +70,22 @@
 		<td>stringify()</td>
 		<td>JSON方法</td>
 		<td>
-			語法：
+			將 Javascript 物件轉換為 JSON 字串，語法如下：
 <pre>
 stringify(obj, [replacer], [space])
 </pre>
-			Converts a JavaScript object into a JSON string. For example:
+			基本範例:
 <pre>
-var jsonobj={"name":"George", "age":29, "friends":["John", "Sarah", "Albert"]}
-var jsonstr=JSON.stringify(jsonobj)
-alert(typeof jsonstr) //string
+var jsonobj = {
+	"name":"George",
+	"age":29,
+	"friends":["John", "Sarah", "Albert"]
+}
+var jsonstr = JSON.stringify(jsonobj);
+alert(jsonstr); // {"name":"George","age":29,"friends":["John","Sarah","Albert"]}
+console.log(typeof jsonstr); // string
 </pre>
-			This method supports two optional parameters:
+			此方法接受兩個可選的參數：
 			<ul>
 				<li>replacer: A user defined function or array of String or Number objects that lets you screen each member within the JSON object to conditionally include as part of the string output.</li>
 				<li>space: A String or Number object that inserts white space into the JSON string for readability purposes. A Number inserts "x" number of spaces (up to 10) before each name/value pair within the string. A String inserts the specified string (up to 10 characters) before each name/value pair within the string.</li>
