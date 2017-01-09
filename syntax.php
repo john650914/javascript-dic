@@ -2078,6 +2078,9 @@
 			</td>
 		</tr>
 	</table>
+<?php
+	include("includes/adsense.php");
+?>
 </main>
 </body>
 </html>

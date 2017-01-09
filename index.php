@@ -10,7 +10,7 @@
 <meta property="og:url" content="http://javascript.john650914.com" />
 <meta property="og:image" content="http://javascript.john650914.com/images/fb.jpg" />
 <meta name="keywords" content="javascript,字典,dic,語法,教學,DOM,API,物件,範例,example,前端工程,前端工程師" />
-<meta name="description" content="收錄了完整Javascript的語法、API說明文件及範例，是前端工程師的好幫手" />
+<meta name="description" content="javascript字典/dic收錄了完整Javascript的語法、API說明文件及範例，是前端工程師的好幫手" />
 <title>Javascript字典．API文件．教學</title>
 <link type="text/css" rel="stylesheet" href="css/default.css"/>
 <?php

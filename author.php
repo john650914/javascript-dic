@@ -34,6 +34,9 @@
 		作品網站：<a href="http://www.john650914.com/">http://www.john650914.com/</a><br>
 		email：<a href="mailto:john650914@gmail.com">john650914@gmail.com</a>
 	</p>
+<?php
+	include("includes/adsense.php");
+?>
 </main>
 </body>
 </html>
