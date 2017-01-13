@@ -150,7 +150,32 @@ c: 789*/
 		<td>for/of</td>
 		<td>關鍵字</td>
 		<td>
-			dfg erg ddnf dgg dhfg f
+			for-of語句是ES6新增，用法和for-in很像<br>
+			它可使用於Array, Object, Set, Map<br>
+			for-in取的是鍵，而for-of取的是值：
+<pre>
+var todo = [
+	{id: 0, text: "剪頭髮", finish: false},
+	{id: 1, text: "打東東", finish: true}
+];
+
+for(var i in todo){ //for/in語句取的是「鍵」
+	console.log(todo[i].text);
+}
+// 剪頭髮
+// 打東東
+
+for(var v of todo){ //for/of語句取的是「值」
+	console.log(v.text);
+}
+// 剪頭髮
+// 打東東
+</pre>
+可以正確使用break、continue和return語句，未完待續…<br>
+…<br>
+…<br>
+…<br>
+…<br>
 		</td>
 	</tr>
 	<tr>

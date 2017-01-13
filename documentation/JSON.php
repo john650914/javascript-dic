@@ -62,8 +62,8 @@
 			<ul>
 				<li>Use JavaScript's eval() function to convert the data into an actual JavaScript object. The advantage of this is that it works in older browsers (FF3 and below, IE7 and below, Opera 10 and below). The disadvantage is that it's slow and potentially unsafe unless you pre-screen the data for malicious code/ methods that could be brought to life using eval().</li>
 				<li>Use JavaScript's built in JSON object. It's fast and safe. The only disadvantage is that it's only supported in newer browsers, such as FF3.5+, IE8+, and Opera 10.5+.</li>
-			</ul>
-
+			</ul><br>
+			http://www.smalljacky.com/programming-language/javascript-programming-language/json-teaching-format/
 		</td>
 	</tr>
 	<tr>

@@ -137,7 +137,7 @@
 			<td>關鍵字</td>
 			<td>
 				<a href="/documentation/Conditionals.php">if</a>
-				<a href="/documentation/Conditionals.php">if/else</a>
+				<a href="/documentation/Conditionals.php">if / else</a>
 				<a href="/documentation/Conditionals.php">switch-case-break-default</a>
 			</td>
 		</tr>
@@ -146,9 +146,10 @@
 			<td>關鍵字</td>
 			<td>
 				<a href="/documentation/Looping.php">for</a>
+				<a href="/documentation/Looping.php">for-in</a>
+				<a href="/documentation/Looping.php">for-of</a>
 				<a href="/documentation/Looping.php">while</a>
 				<a href="/documentation/Looping.php">do/while</a>
-				<a href="/documentation/Looping.php">for / in</a>
 				<a href="/documentation/Looping.php">break</a>
 				<a href="/documentation/Looping.php">continue</a>
 			</td>
@@ -234,7 +235,7 @@
 				<a href="/documentation/Array.php">concat()</a>
 				<a href="/documentation/Array.php">every()</a>
 				<a href="/documentation/Array.php">filter()</a>
-				<a href="/documentation/Array.php">foreach()</a>
+				<a href="/documentation/Array.php">forEach()</a>
 				<a href="/documentation/Array.php">indexOf()</a>
 				<a href="/documentation/Array.php">join()</a>
 				<a href="/documentation/Array.php">lastIndexOf()</a>

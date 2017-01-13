@@ -66,7 +66,28 @@ alert(s.length +"\n"+"Style Sheets");
 	<tr>
 		<td>Boolean</td>
 		<td>資料類形</td>
-		<td>Boolean有兩種值：true和false，與字串不同，Boolean不能用引號框起來。typeof()的傳回值是boolean。</td>
+		<td>
+			Boolean 有兩種值：true 和 false，與字串不同，Boolean 不能用引號框起來。typeof() 的傳回值是 boolean。<br>
+			在 JavaScript 中，「undefined, null, false, 0, "", NaN」這些值會等於 false，其它的值都會是 true，特別是是物件類永遠為 true，下面列出所有的狀況：
+<pre>
+var q1 = undefined; // => false
+var q2 = null; // => false
+var q3 = []; // => true
+var q4 = {}; // => true
+var q5 = 0; // => false
+var q6 = 1; // => true
+var q7 = 999; // => true
+var q8 = ""; // => false
+var q9 = NaN; // => false
+var q10 = "hello"; // => true
+var q11 = false; // => false
+var q12 = true; // => true
+var q13 = new Boolean("true"); // => true
+var q14 = new Boolean("false"); // => true
+var q15 = new Number(0); // => true
+var q16 = new Number(1); // => true
+</pre>
+		</td>
 	</tr>
 	<tr>
 		<td>NaN</td>
