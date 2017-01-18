@@ -110,7 +110,9 @@ window.onscroll=function(){
 	<tr>
 		<td>onbeforeunload</td>
 		<td>事件屬性</td>
-		<td>webkit不支援啊~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>
+		<td>
+			webkit不支援啊~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>
+			（20170118，好像又不是不支援，只是支援的程度很奇怪，要找時間來確認一下）<br><br>
 			原文：Fires when the page is about to be unloaded, prior to window.onunload event firing. Supported in all modern browsers. By setting event.returnValue to a string, the browser will prompt the user whether he/she wants to leave the current page when attempting to:
 <pre>
 window.onbeforeunload=function(e){
@@ -122,13 +124,17 @@ window.location="http://www.google.com" //prompt is invoked
 	<tr>
 		<td>onunload</td>
 		<td>事件屬性</td>
-		<td>webkit不支援啊~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>
+		<td>
+			webkit不支援啊~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>
+			（20170118，好像又不是不支援，只是支援的程度很奇怪，要找時間來確認一下）<br><br>
 			原文：Fires when the page is unloaded- process cannot be overruled at this point. Often used to run code cleanup routines.</td>
 	</tr>
 	<tr>
 		<td>closed</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			判斷是否視窗被關閉，傳回一個布林值，這個視窗指的是使用window.open()開啟的視窗。
+		</td>
 	</tr>
 	<tr>
 		<td>defaultStatus</td>
@@ -180,7 +186,53 @@ window.location="http://www.google.com" //prompt is invoked
 	<tr>
 		<td>opener</td>
 		<td>屬性</td>
-		<td></td>
+		<td>
+			參照使用了window.open()方法的視窗，這個屬性只能在被開啟的新視窗引用；<br>
+			下範例示範了獲取開新視窗的原視窗，並在兩個視窗中傳遞變數：
+<pre>
+&lt;!-- opener.htm(原視窗) --&gt;
+&lt;h2&gt;Opener (parent window)&lt;/h2&gt;
+&lt;div&gt;
+	&lt;button id="open_window_btn"&gt;開新視窗&lt;/button&gt;
+	&lt;div id="data"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var parentVar = 123;
+var popupWindow;
+
+document.getElementById('data').innerHTML = parentVar;
+
+document.getElementById('open_window_btn').onclick = function(){
+	popupWindow = window.open("child.htm", "thePopUp", "height=500,width=500");
+}
+
+function whenPopUpClosed() {
+	window.setTimeout(function() {
+		if(popupWindow.closed){
+			document.getElementById('data').innerHTML = parentVar;
+		}
+	}, 10);
+}
+&lt;/script&gt;
+
+&lt;!-- child.htm(新視窗) --&gt;
+&lt;h2&gt;Opened Window (child window)&lt;/h2&gt;
+&lt;div&gt;
+	&lt;button id="close_window_btn" onclick="window.close()"&gt;關閉視窗&lt;/button&gt;
+	&lt;div id="data"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+document.getElementById('data').innerHTML = window.opener.parentVar;
+
+window.onunload = function() {
+	var theOpener = window.opener;
+	theOpener.parentVar = 456;
+	theOpener.whenPopUpClosed();
+}
+&lt;/script&gt;
+</pre>
+			上例的程式看來非常複雜，但其實只是為了增加互動，如果只是純粹傳遞變數，把opener.htm及child.htm中的whenPopUpClosed()拔掉也是可以運作的，我們試著拔掉whenPopUpClosed()後在Console中alert(parentVar)就會看到parentVar變成456了。
+		</td>
 	</tr>
 	<tr>
 		<td>outerWidth</td>
@@ -421,8 +473,11 @@ window.onload = function(){
 	<tr>
 		<td>close()</td>
 		<td>方法</td>
-		<td>和window.open()方法使用時可以用var.close()的方式關掉新建立的瀏覽器視窗，請參考window.open()；也可在新建視窗中加入window.close();關閉新開啟的瀏覽器視窗。<br />
-			原文：Closes a window.</td>
+		<td>
+			關閉視窗（或指定的視窗）這個方法在各瀏覽器間的行為都不太相同，只有在使用window.open()方法是比較統一的。<br><br>
+			例如直接在網頁中下window.close()，在Chrome中會直接關閉視窗，在IE中會跳alert詢問是否要關閉，在Firefox和Opera則完全沒有動作，另外在Chrome的無痕模式中也不會動作，反正怪事一堆，不要直接使用比較保險。<br><br>
+			關於使用window.open()開啟的視窗則幾乎沒有問題，例如將新開的視窗存到變數再關閉，或是在新視窗中直接window.close()都可以正常運作，甚至在新視窗中使用opener屬性還可以關閉母視窗。
+		</td>
 	</tr>
 	<tr>
 		<td>confirm()</td>
@@ -583,11 +638,6 @@ var mywin=window.open("http://www.notcurrentdomain.com", "", "width=800px, heigh
 mywin.moveTo(0, 0) //Not allowed in IE: an exception is thrown.;
 </pre>
 This restriction does not apply in other browsers.</td>
-	</tr>
-	<tr>
-		<td>opener()</td>
-		<td>方法</td>
-		<td></td>
 	</tr>
 	<tr>
 		<td>print()</td>
