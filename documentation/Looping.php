@@ -28,6 +28,7 @@
 ?>
 <main class="main">
 <h1>Javascript - Looping</h1>
+	<?php include("../includes/adsense.php"); ?>
 <p>
 重要參考：<br>
 http://rocksaying.tw/archives/2015/ES6_for-of_and_iterator.html
@@ -108,7 +109,7 @@ window.onload = function(){
 </pre></td>
 	</tr>
 	<tr>
-		<td>for/in</td>
+		<td>for-in</td>
 		<td>關鍵字</td>
 		<td>for...in通常用來列舉物件的屬性。語法如下：
 <pre>
@@ -147,7 +148,7 @@ c: 789*/
 		</td>
 	</tr>
 	<tr>
-		<td>for/of</td>
+		<td>for-of</td>
 		<td>關鍵字</td>
 		<td>
 			for-of語句是ES6新增，用法和for-in很像<br>
@@ -170,6 +171,13 @@ for(var v of todo){ //for/of語句取的是「值」
 }
 // 剪頭髮
 // 打東東
+</pre>
+			下例示範在Javascript物件中使用for-of：
+<pre>
+var Obj = { firstname: "Chang", lastname: "JOHN" };
+for (var key of Object.keys(Obj)) {
+	console.log(key + ": " + Obj[key]);
+}
 </pre>
 可以正確使用break、continue和return語句，未完待續…<br>
 …<br>

@@ -65,6 +65,7 @@ ol, ul{margin-left:15px;}
 .menu_toggler{position:absolute; z-index:3; top:9px; right:13px; width:32px; height:30px; background:#292963; display:none;}
 .menu_toggler:before{position:absolute; width:100%; top:4px; left:0; height:4px; background:#fff; content:""; border-radius:10px; box-shadow:0 9px 0 #fff;}
 .menu_toggler:after{position:absolute; width:100%; bottom:4px; left:0; height:4px; background:#fff; content:""; border-radius:10px;}
+.aaddsseennssee{margin-bottom:20px; max-width:855px;}
 
 
 @media(max-width:768px){

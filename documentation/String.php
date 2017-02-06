@@ -28,6 +28,7 @@
 ?>
 <main class="main">
 <h1>Javascript - String物件</h1>
+	<?php include("../includes/adsense.php"); ?>
 <table class="doc-table">
 	<tr>
 		<th>名稱</th>
@@ -273,7 +274,25 @@ alert(myString.substring(2,-3)); //返回Ts(-3變成0再變成第一個參數，
 	<tr>
 		<td>trim()</td>
 		<td>方法</td>
-		<td></td>
+		<td>
+			Trims a string on both sides for any spaces and returns the result. The original string is unmodified: Example:
+<pre>
+var sitename=" JavaScript Kit   "
+alert(sitename.trim()) //alerts "JavaScript Kit". Variable itself unchanged.
+</pre>
+			Since trim() is not yet supported in all browsers (most notably IE), it should be coupled with a fall back method for achieving the same result in those lesser browsers, such as via regular expressions. The following example uses trim() in capable browsers, and regular expressions instead in non capable to trim a string:<br><br>
+			Cross Browser Example:
+<pre>
+function trimstring(str){
+	if (str.trim)
+		return str.trim()
+	else
+		return str.replace(/(^\s*)|(\s*$)/g, "") //find and remove spaces from left and right hand side of string
+}
+
+trimstring(" JavaScript Kit   ")
+</pre>
+		</td>
 	</tr>
 	<tr>
 		<td>valueOf()</td>

@@ -28,6 +28,7 @@
 ?>
 <main class="main">
 <h1>Javascript - Global Functions</h1>
+	<?php include("../includes/adsense.php"); ?>
 這裡面有更詳細的說明：<a style="word-wrap:break-word; word-break:break-all;" href="http://www.javascriptkit.com/jsref/globalfunctions.shtml">http://www.javascriptkit.com/jsref/globalfunctions.shtml</a>
 <table class="doc-table">
 	<tr>
@@ -122,6 +123,7 @@ url = url + "?name=" + encodeURIComponent("中文");
 			parseFloat()會先分析指定的字串，首先檢查位置0的字元是否為有效數字，如果不是則返回NaN，不再進行任何操作。如果位置0為有效數字，則繼續往下找到字串結束或是遇見非數值字元為止，如下例：
 <pre>
 alert(parseFloat("34535orange")); //返回34535
+alert(parseFloat(435.34)); //返回435.34
 alert(parseFloat("435.34")); //返回435.34
 alert(parseFloat("435.34.564")); //返回435.34
 alert(parseFloat("john650914@gmail.com")); //返回NaN

@@ -28,6 +28,7 @@
 ?>
 <main class="main">
 <h1>Javascript - image物件</h1>
+	<?php include("../includes/adsense.php"); ?>
 <table class="doc-table">
 	<tr>
 		<th>名稱</th>

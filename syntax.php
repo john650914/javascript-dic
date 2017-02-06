@@ -212,6 +212,7 @@
 			</td>
 		</tr>
 	</table>
+	<?php include("includes/adsense.php"); ?>
 	<table class="api-table">
 		<CAPTION>JS Objects</CAPTION>
 		<tr>
@@ -2079,9 +2080,6 @@
 			</td>
 		</tr>
 	</table>
-<?php
-	include("includes/adsense.php");
-?>
 </main>
 </body>
 </html>

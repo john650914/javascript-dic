@@ -28,6 +28,7 @@
 ?>
 <main class="main">
 <h1>Javascript - Ajax物件</h1>
+	<?php include("../includes/adsense.php"); ?>
 <div class="intro_">
 	這邊來說明一下Ajax大概的原理及使用方式，以下是Ajax的基本運作流程：
 	<ol>

@@ -28,10 +28,8 @@
 ?>
 <main class="main">
 	<h1 class="index-h1">Javascript函式庫</h1>
-	<p>這裡將列出一些常見並持續更新的JS library，以及一些好用的Javascript套件。</p>
-<?php
-	include("includes/adsense.php");
-?>
+	<p>建製中。這裡將列出一些常見並持續更新的JS library，以及一些好用的Javascript套件。</p>
+<?php include("includes/adsense.php"); ?>
 </main>
 </body>
 </html>
