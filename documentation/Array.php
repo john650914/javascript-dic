@@ -556,10 +556,62 @@ alert(a3.some(isNumber)); //傳回false
 		<td>sort()</td>
 		<td>方法</td>
 		<td>
-			將陣列元素按照字元進行排序，如下例：
+			將陣列元素按照字母或數字進行排序，它會直接改變原本的陣列，如下例：
 <pre>
-var fruit = ["starfruit","tomato","apple","banana","orange"];
-alert(fruit.sort().join(" - ")); //返回apple - banana - orange - starfruit - tomato
+var myAry = [ "arc", "abc", "bbc", "ABC", "abcd", "Abc", "a-z", "123" ];
+console.log(myAry.sort());
+// 傳回["123", "ABC", "Abc", "a-z", "abc", "abcd", "arc", "bbc"]
+console.log(myAry);
+// 原本的變數也被改變了，傳回["123", "ABC", "Abc", "a-z", "abc", "abcd", "arc", "bbc"]
+</pre>
+			在預設的情況下，sort()是依照字母表做遞增排序的，例如"Apple"接下來是"Banana"，然而數字也會以字串的方式做排序，所以在輸出的候不會以數值的大小做排序，如下例100會排在25之前：
+<pre>
+var myAry = [ 25, 100, 300 ];
+console.log(myAry.sort());
+// 傳回[100, 25, 300]
+</pre>
+			但這樣的結果明顯不是我們要的，sort()另外提供了一個「比對的function」來處理這個問題，語法如下：
+<pre>
+array.sort(function(a, b){return a-b});
+</pre>
+			當sort()在比對兩個值的時候，這個function會依照它的參數傳回一個負數、0、或是正整數，然後依照這個傳回的數值將陣列做排序。<br>
+			例如在比對25和100的時候，sort()會呼叫這個function(a,b)代入25,100，然後這個function計算25減100，return -75，sort()就知道25比100還小來做排序，如下例：
+<pre>
+var myAry = [ 25, 100, 300 ];
+console.log(myAry.sort(function(a,b){return a-b}));
+// 傳回[25, 100, 300]
+</pre>
+			如果我們需要遞減的結果把a-b換成b-a就好了：
+<pre>
+var myAry = [ 25, 100, 300 ];
+console.log(myAry.sort(function(a,b){return b-a}));
+// 傳回[300, 100, 25]
+</pre>
+			透過sort()可以做出許多不用的應用，例如找出陣列中最大的值，如下例：
+<pre>
+var myAry = [ 25, 100, 300 ];
+myAry.sort(function(a,b){return b-a});
+console.log(myAry[0]);
+// 傳回300
+</pre>
+			另外，如果我們要使用陣列中的物件的某個值來做排序，可以依照下範例的做法：
+<pre>
+var myAry = [ 
+	{name:"John", sort:2},
+	{name:"Mary", sort:1},
+	{name:"Dick", sort:4},
+	{name:"Hulk", sort:3}
+];
+myAry.sort(function(a,b){
+	if (a.sort < b.sort)
+		return -1;
+	if (a.sort > b.sort)
+		return 1;
+	return 0;
+});
+console.log(myAry);
+// 查看console就可以看到新的排序了
+// 如果屬性值是字串也可以用這個範例的做法來做排序
 </pre>
 		</td>
 	</tr>
